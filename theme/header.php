@@ -8,7 +8,7 @@
                         <ul class="list">
                             <li><a href="tel:+12312-3-1209">+12312-3-1209</a></li>
                             <li><a href="#">Sell / Rent Property</a></li>
-                            <li><a href="#">login / register</a></li>
+                            <li><a href="login.php">login / register</a></li>
                         </ul>
                     </div>
                 </div>					
@@ -25,12 +25,11 @@
 
                       <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#service">Service</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="residencias.php">Imóveis</a></li>
                             <li><a href="#property">Property</a></li>
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="generic.html">Generic</a></li>
-                            <li><a href="elements.html">Elements</a></li>
                         </ul>
                       </div>						
                 </div>
