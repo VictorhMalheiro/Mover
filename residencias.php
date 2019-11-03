@@ -76,16 +76,24 @@ CSS
 			<div class="col-2 d-none d-md-block bg-light ">
 				<form >
 
-					<div class="form-group mt-2 mb-3">
+					<div class="form-group mt-2 mb-3 ">
 						<h3>Menu</h3>
 						<label for="labelLocalizacao">Localização do Imovel</label>
 						<input type="text" class="form-control" id="fieldLocalizacao" placeholder="Digite rua, bairro ou cidade">
 					</div>
 
-					<div class="form-group mt-3">
+					<div class="form-group mt-1">
 						<label for="formGroupExampleInput2">Tipo de Imóveis</label>
 						<select class="form-control" id="exampleFormControlSelect1">
 							<option>Mostrar Todos</option>
+							<option>Casa Geminada</option>
+							<option>Sobrado</option>
+							<option>Bangalô</option>
+							<option>Edícula</option>
+							<option>Loft</option>
+							<option>Apartamento</option>
+							<option>Kitnet</option>
+							<option>Flat</option>
 						</select>
 					</div>
 
@@ -93,11 +101,11 @@ CSS
 					<div class="form-row mt-3">
 						<div class="col">
 							<label for="labelLocalizacao">Preço Minimo</label>
-							<input type="text" class="form-control" id="fieldLocalizacao" placeholder="R$">
+							<input type="text" class="form-control" id="fieldLocalizacao" placeholder="R$0,00">
 						</div>
 						<div class="col mb-2">
 							<label for="labelLocalizacao">Preço Maximo</label>
-							<input type="text" class="form-control" id="fieldLocalizacao" placeholder="R$">
+							<input type="text" class="form-control" id="fieldLocalizacao" placeholder="R$R$0,00">
 						</div>
 					</div>
 
@@ -110,6 +118,10 @@ CSS
 							<option>4</option>
 							<option>5</option>
 						</select>
+					</div>
+					<div class="form-group mt-2 text-center ">
+						<input type="Submit" class="btn btn-primary  btn-lg btn-block" name="btnEnviarFiltro" value="Pesquisar">
+						
 					</div>
 				</form>
 			</div>
@@ -132,24 +144,24 @@ CSS
 								</div>
 								<div class="desc">
 									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
+										<h4><a href="#">Residencia do Vitor</a></h4>
+										<h4>R$10.000</h4>
 									</div>
 									<div class="middle">
 										<div class="d-flex justify-content-start">
-											<p>Bed: 04</p>
-											<p>Bath: 03</p>
-											<p>Area: 750sqm</p>
+											<p>Quarto(s): 04</p>
+											<p>Banheiro(s): 03</p>
+											<p>Area: 200x200</p>
 										</div>
 										<div class="d-flex justify-content-start">
-											<p>Pool: <span class="gr">Yes</span></p>
+											<p>Piscina: <span class="gr">Yes</span></p>
 											<p>Internet: <span class="rd">No</span></p>
-											<p>Cleaning: <span class="rd">No</span></p>
+											<p>Faxinera: <span class="rd">No</span></p>
 										</div>
 									</div>
 									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+										<p><span class="lnr lnr-heart"></span> 15 Gostei</p>
+										<p><span class="lnr lnr-bubble"></span> 02 Comentario</p>
 									</div>	
 								</div>	
 							</div>
