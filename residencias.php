@@ -74,17 +74,17 @@ CSS
 
 		<div class="row">
 			<div class="col-2 d-none d-md-block bg-light ">
-				<form >
+				<form method="POST" onsubmit="return false;">
 
 					<div class="form-group mt-2 mb-3 ">
 						<h3>Menu</h3>
 						<label for="labelLocalizacao">Localização do Imovel</label>
-						<input type="text" class="form-control" id="fieldLocalizacao" placeholder="Digite rua, bairro ou cidade">
+						<input type="text" name="fieldLocalizacao" class="form-control" id="fieldLocalizacao" placeholder="Digite rua, bairro ou cidade">
 					</div>
 
 					<div class="form-group mt-1">
 						<label for="formGroupExampleInput2">Tipo de Imóveis</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<select class="form-control" name="fieldTipoImoveis" id="fieldTipoImoveis">
 							<option>Mostrar Todos</option>
 							<option>Casa Geminada</option>
 							<option>Sobrado</option>
@@ -96,22 +96,22 @@ CSS
 							<option>Flat</option>
 						</select>
 					</div>
-
+ 
 
 					<div class="form-row mt-3">
 						<div class="col">
 							<label for="labelLocalizacao">Preço Minimo</label>
-							<input type="text" class="form-control" id="fieldLocalizacao" placeholder="R$0,00">
+							<input type="text" name="fieldPrecoMin" class="form-control" id="fieldPrecoMin" placeholder="R$0,00">
 						</div>
 						<div class="col mb-2">
 							<label for="labelLocalizacao">Preço Maximo</label>
-							<input type="text" class="form-control" id="fieldLocalizacao" placeholder="R$R$0,00">
+							<input type="text" name="fieldPrecoMax" class="form-control" id="fieldPrecoMax" placeholder="R$0,00">
 						</div>
 					</div>
 
 					<div class="form-group mt-2">
 						<label for="formGroupExampleInput2">Numero de quartos</label>
-						<select class="form-control" id="exampleFormControlSelect1">
+						<select class="form-control" name="fieldNumeroQuartos" id="fieldNumeroQuartos">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -120,20 +120,16 @@ CSS
 						</select>
 					</div>
 					<div class="form-group mt-2 text-center ">
-						<input type="Submit" class="btn btn-primary  btn-lg btn-block" name="btnEnviarFiltro" value="Pesquisar">
+						<input type="Submit" class="btn btn-primary  btn-lg btn-block" name="btnEnviarFiltro" value="Pesquisar" onclick="ajaxPesquisaResidencia()">
 						
 					</div>
 				</form>
 			</div>
-
-
 			<div class="container ">
 				<div class="row">
 					<div class="col-12 mt-3 mb-3">
 						<h3>Imóveis</h3>
-
 					</div>
-
 					<hr>
 					<div class="border border-lights" s="col-12">
 						<div class="row mt-5">
@@ -286,5 +282,6 @@ CSS
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/main.js"></script>	
+		<script src="js/ajaxPesquisaResidencia.js"></script>
 	</body>
 	</html>
