@@ -31,4 +31,5 @@ func_header();
       }catch(PDOException $e){
         echo $e;
       }
+    }
 ?>
