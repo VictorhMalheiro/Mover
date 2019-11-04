@@ -1,5 +1,5 @@
 <?php 
-include "conexao.php";
+include("conexao.php");
 
 $pesquisa = array
 (
@@ -10,7 +10,13 @@ $pesquisa = array
 	"numeroQuartos" => $_POST['numeroQuartos'],
 );
 
-$consulta = 'SELECT * FROM';
+$query = 'SELECT * FROM tab_casa';
+
+$consulta = mysqli_query($conn, $query);
+
+print_r($consulta);
+
+
 
 
 
