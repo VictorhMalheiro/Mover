@@ -53,17 +53,14 @@ CSS
 			<div class="carousel-item">
 				<img src="img/header-bg.jpg" class="d-block w-100" alt="...">
 			</div>
-			<div class="carousel-item">
-				<img src="img/header-bg.jpg" class="d-block w-100" alt="...">
-			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
+			<span class="sr-only">Anterior</span>
 		</a>
 		<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
+			<span class="sr-only">Próxima</span>
 		</a>
 	</div>
 	<!-- End service Area -->
@@ -71,70 +68,75 @@ CSS
 	<!-- Start Listagem-->
 	<hr>
 	<section>
-
 		<div class="row">
-			<div class="col-2 d-none d-md-block bg-light ">
-				<form method="POST" onsubmit="return false;">
-
-					<div class="form-group mt-2 mb-3 ">
-						<h3>Menu</h3>
-						<label for="labelLocalizacao">Localização do Imovel</label>
-						<input type="text" name="fieldLocalizacao" class="form-control" id="fieldLocalizacao" placeholder="Digite rua, bairro ou cidade">
+			<div class="col-2">
+				<div class="container-fluid p-2">
+					<div class="col">
+						<form method="POST" onsubmit="return false;">
+							<div class="form-group  mb-3">
+								<h3>Menu</h3>
+								<label for="labelLocalizacao">Localização do Imovel</label>
+								<input type="text" name="fieldLocalizacao" class="single-input-secondary" id="fieldLocalizacao" placeholder="Digite rua, bairro ou cidade">
+							</div>
+	
+							<div class="form-group mt-1">
+								<label for="formGroupExampleInput2">Tipo de Imóveis</label>
+								
+								<div class="input-group-icon mt-10">
+									<div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+									<div class="form-select" id="default-select">
+										<select style="display: none;">
+										<option value="1">Mostrar Todos</option>
+										<option value="1">Casa Geminada</option>
+										<option value="1">Sobrado</option>
+										<option value="1">Bangalô</option>
+										<option value="1">Edícula</option>
+										<option value="1">Loft</option>
+										<option value="1">Apartamento</option>
+										<option value="1">Kitnet</option>
+										<option value="1">Flat</option>
+										</select>
+									</div>
+								</div>
+		
+							</div>
+							<div class="form-row mt-3">
+								<div class="col">
+									<label for="labelLocalizacao">Preço Minimo</label>
+									<input type="number" step=".01" name="fieldPrecoMin" class="single-input-secondary" id="fieldPrecoMin" placeholder="R$0,00">
+								</div>
+								<div class="col mb-2">
+									<label for="labelLocalizacao">Preço Maximo</label>
+									<input type="number"  step=".01" name="fieldPrecoMax" class="single-input-secondary" id="fieldPrecoMax" placeholder="R$0,00">
+								</div>
+							</div>
+	
+							<div class="form-group mt-2">
+								<label for="formGroupExampleInput2">Numero de quartos</label>
+								<select class="single-input-secondary" name="fieldNumeroQuartos" id="fieldNumeroQuartos">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group mt-2 text-center ">
+								<input type="Submit" class="btn btn-primary  btn-lg btn-block" name="btnEnviarFiltro" value="Pesquisar" onclick="ajaxPesquisaResidencia()">
+								
+							</div>
+						</form>
 					</div>
-
-					<div class="form-group mt-1">
-						<label for="formGroupExampleInput2">Tipo de Imóveis</label>
-						<select class="form-control" name="fieldTipoImoveis" id="fieldTipoImoveis">
-							<option>Mostrar Todos</option>
-							<option>Casa Geminada</option>
-							<option>Sobrado</option>
-							<option>Bangalô</option>
-							<option>Edícula</option>
-							<option>Loft</option>
-							<option>Apartamento</option>
-							<option>Kitnet</option>
-							<option>Flat</option>
-						</select>
-					</div>
- 
-
-					<div class="form-row mt-3">
-						<div class="col">
-							<label for="labelLocalizacao">Preço Minimo</label>
-							<input type="text" name="fieldPrecoMin" class="form-control" id="fieldPrecoMin" placeholder="R$0,00">
-						</div>
-						<div class="col mb-2">
-							<label for="labelLocalizacao">Preço Maximo</label>
-							<input type="text" name="fieldPrecoMax" class="form-control" id="fieldPrecoMax" placeholder="R$0,00">
-						</div>
-					</div>
-
-					<div class="form-group mt-2">
-						<label for="formGroupExampleInput2">Numero de quartos</label>
-						<select class="form-control" name="fieldNumeroQuartos" id="fieldNumeroQuartos">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-						</select>
-					</div>
-					<div class="form-group mt-2 text-center ">
-						<input type="Submit" class="btn btn-primary  btn-lg btn-block" name="btnEnviarFiltro" value="Pesquisar" onclick="ajaxPesquisaResidencia()">
-						
-					</div>
-				</form>
+				</div>
 			</div>
-			<div class="container ">
-				<div class="row">
-					<div class="col-12 mt-3 mb-3">
+			<div class="col-10">
+				<div class="container-fluid p-5">
 						<h3>Imóveis</h3>
-					</div>
 					<hr>
-					<div class="border border-lights" s="col-12">
-						<div class="row mt-5">
-							<div class="single-property col-6">
-								<div class=" images">
+					<div>
+						<div class="row">
+							<div class="single-property col-4">
+								<div class="images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
 								</div>
@@ -157,11 +159,11 @@ CSS
 									</div>
 									<div class="bottom d-flex justify-content-start">
 										<p><span class="lnr lnr-heart"></span> 15 Gostei</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comentario</p>
+										<p><span class="lnr lnr-bubble"></span> 02 Comentários</p>
 									</div>	
 								</div>	
 							</div>
-							<div class="single-property col-6">
+							<div class="single-property col-4">
 								<div class="images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
@@ -190,7 +192,7 @@ CSS
 									</div>	
 								</div>	
 							</div>
-							<div class="single-property col-6">
+							<div class="single-property col-4">
 								<div class=" images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
@@ -218,7 +220,7 @@ CSS
 									</div>	
 								</div>	
 							</div>
-							<div class="single-property col-6">
+							<div class="single-property col-4">
 								<div class="images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
@@ -247,22 +249,12 @@ CSS
 									</div>	
 								</div>	
 							</div>
-						
-
-
-
 						</div>
-
 					</div>
-				</div>
-			</nav>
-			<!-- FIM QUADRO DE OPÇÕES -->
-
-			<!-- COMEÇO DASHBOARD -->
-
-
-
-		</section>
+				</div> 
+			</div>
+		</div>
+	</section>
 
 		<!-- FOOTER START -->
 		<?php
@@ -274,6 +266,7 @@ CSS
 		<script src="js/vendor/jquery-2.2.4.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="https://unpkg.com/popper.js"></script>
 		<script src="js/jquery.ajaxchimp.min.js"></script>
 		<script src="js/jquery.nice-select.min.js"></script>
 		<script src="js/jquery.sticky.js"></script>
@@ -281,5 +274,6 @@ CSS
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/ajaxPesquisaResidencia.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 	</html>
