@@ -17,7 +17,6 @@
 		<title>Real Estate</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!--
 			CSS
 			============================================= -->
@@ -29,16 +28,25 @@
 			<link rel="stylesheet" href="css/bootstrap.css">
 			<link rel="stylesheet" href="css/main.css">
 			
-			
+			<!-- <script src="js/ajaxScripts.js"></script> -->
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 			
 		</head>
 		<?php
+			ob_start();
+			session_start();
+
+			if(isset($_SESSION['login']) && (isset($_SESSION['senha']))){
+				header("Location dashboard.php");exit;
+			}
 			// INCLUDES PHP
 			include_once("./theme/header.php");
 			include_once("./theme/footer.php");
 		?>
 		<body>
-
+			
 			<section class="generic-banner relative">
 				<!-- START HEADER -->
 				<?php
@@ -55,7 +63,7 @@
 								Faça login e gerencie sua conta.
 							</p>
 							<div>
-								<form onsubmit="return logar()" method="POST" action="controller/login.php" >
+								<form onsubmit="return teste()" method="POST" action="controller/login.php" >
 									<div class="mt-10">
 										<input type="text" onblur="" name="login" placeholder="Usuário" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Usuário'" required="" class="single-input" autocomplete="username">
 									</div>
@@ -87,10 +95,6 @@
 			</div>
 
 			
-			<!-- <script src="https://unpkg.com/popper.js"></script>
-			<script src="https://unpkg.com/tooltip.js"></script> -->
-			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>
@@ -101,17 +105,17 @@
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<script src="js/jquery.magnific-popup.min.js"></script>
 			<script src="js/main.js"></script>
-			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 			<script>
-				function logar(){
+				function teste(){
 					var login = $("input[name=login]").val();
 					var senha = $("input[name=senha]").val();
-					
-					$.post("controller/login.php", { login: login, senha: senha },
-						function(data){
-							$("#resultado").html(data)
+					var logar = $("input[name=logar]").val();
+
+					$.post("controller/login.php", { login: login, senha: senha,logar: logar },
+					function(data){
+						$("#resultado").html(data)
 					})
-					return false
+					return false;
 				}
 			</script>
 	</body>
