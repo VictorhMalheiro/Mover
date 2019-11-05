@@ -85,7 +85,7 @@ CSS
 								<div class="input-group-icon mt-10">
 									<div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
 									<div class="form-select" id="default-select">
-										<select style="display: none;">
+										<select style="display: none;" id="fieldTipoImovel">
 										<option value="1">Mostrar Todos</option>
 										<option value="1">Casa Geminada</option>
 										<option value="1">Sobrado</option>

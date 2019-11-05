@@ -1,7 +1,7 @@
 function ajaxPesquisaResidencia()
 {
 	localizacao = $("#fieldLocalizacao").val();
-	tipoImovel = $("#fieldTipoImoveis").val();
+	tipoImovel = $("#fieldTipoImovel").val();
 	precoMin = $("#fieldPrecoMin").val();
 	precoMax = $("#fieldPrecoMax").val();
 	numeroQuartos = $("#fieldNumeroQuartos").val();
