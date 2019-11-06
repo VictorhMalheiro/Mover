@@ -21,7 +21,7 @@ function ajaxPesquisaResidencia()
 		    },
 		    success: function(retorno) 
 		    {
-		    	alert('retorno');
+		    	alert(retorno);
 		    }
         });
 }

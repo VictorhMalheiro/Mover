@@ -94,7 +94,7 @@ CSS
 										<option value="1">Loft</option>
 										<option value="1">Apartamento</option>
 										<option value="1">Kitnet</option>
-										<option value="1">Flat</option>
+										<option value="Flat">Flat</option>
 										</select>
 									</div>
 								</div>
