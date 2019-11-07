@@ -20,6 +20,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
     <!--
     CSS
     ============================================= -->
@@ -38,9 +39,8 @@ session_start();
             __header();
         ?>
         <!-- END HEADER -->
-			
         <div class="container pt-30">
-            <div class="row height align-items-center justify-content-center">
+            <div class="row height align-items-center justify-content-center">                
                 <div class="col-lg-10">
                     <div class="generic-banner-content">
                         <h2 class="text-white text-center"><?php ?></h2>
@@ -65,7 +65,6 @@ session_start();
                                     $contar = $res->rowCount();
                                     
                                     if($contar == 1){
-                                        echo "<script>alert('aqui entrou');</script>";
                                         $linha = $res->fetchAll();
                                         
                                         foreach($linha as $listar){
@@ -78,7 +77,7 @@ session_start();
                             ?>
                             BEM VINDO <?php echo $nomeUsuario;?>
                         </p>
-                        
+                                                
                     </div>
                 </div>
             </div>

@@ -28,12 +28,12 @@ CSS
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
 </head>
-<style type="text/css">
+<!-- <style type="text/css">
 	*{
 		margin: 0px !important;
 
 	}
-</style>
+</style> -->
 <body>
 
 

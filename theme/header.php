@@ -36,10 +36,10 @@
                 <div class="menu-top container">
                     <div class="d-flex justify-content-end align-items-center">
                         <ul class="list">
-                            <li><a href="tel:+12312-3-1209">+12312-3-1209</a></li>
                             <?php
                                 if($logged == true){
                                     echo "<li>Olá ".$nomeUsuario."</li>";
+                                    echo "<li><a href='cadastrarImovel.php'>Cadastrar Imovel</a></li>";
                                 }
                             ?>
                         </ul>
@@ -49,7 +49,7 @@
 
             <nav class="navbar navbar-expand-lg  navbar-light bg-light">
                 <div class="container">
-                      <a class="navbar-brand" href="index.html">
+                      <a class="navbar-brand" href="index.php">
                           <img src="img/logo.png" alt="">
                       </a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
