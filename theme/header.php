@@ -1,5 +1,35 @@
-<?php
+<?php 
+    include_once("controller/logout.php");
+    
     function __header(){
+        include("controller/conexao.php");
+        $logged = false;
+        $login = null;
+        $senha = null;
+        if(isset($_SESSION['login']) && (isset($_SESSION['senha']))){
+            $logged = true;
+            $login = $_SESSION['login'];
+            $senha = $_SESSION['senha'];
+        }
+        //SELECIONAR OS DADOS DO USUARIO
+        $buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
+        try{
+            $res = $conn->prepare($buscaUsuario);
+            $res->bindParam('login',$login, PDO::PARAM_STR);
+            $res->bindParam('senha',$senha, PDO::PARAM_STR);
+            $res-> execute();
+            $contar = $res->rowCount();
+            
+            if($contar == 1){
+                $linha = $res->fetchAll();
+                
+                foreach($linha as $listar){
+                   $nomeUsuario = $listar['nome'];
+                }
+            }
+        }catch(PDOException $erro){
+            echo $erro;
+        }
         ?>        
         <header class="default-header">
 				<div class="menutop-wrap">
@@ -7,11 +37,14 @@
                     <div class="d-flex justify-content-end align-items-center">
                         <ul class="list">
                             <li><a href="tel:+12312-3-1209">+12312-3-1209</a></li>
-                            <li><a href="#">Sell / Rent Property</a></li>
-                            <li><a href="login.php">login / register</a></li>
+                            <?php
+                                if($logged == true){
+                                    echo "<li>Olá ".$nomeUsuario."</li>";
+                                }
+                            ?>
                         </ul>
                     </div>
-                </div>					
+                </div>
             </div>
 
             <nav class="navbar navbar-expand-lg  navbar-light bg-light">
@@ -30,13 +63,21 @@
                             <li><a href="#property">Property</a></li>
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="generic.html">Generic</a></li>
+                            <?php
+                                if($logged == true){
+                                    echo "<li><a href='?sair'>Sair</a></li>";
+                                }else{
+                                    echo "<li><a href='login.php'>Entrar</a></li>";
+                                }
+                            ?>
                         </ul>
-                      </div>						
+                      </div>
                 </div>
             </nav>
 
 
         </header>
+        
         <?php
     }
 ?>
