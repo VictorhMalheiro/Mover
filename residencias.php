@@ -27,6 +27,7 @@ CSS
 <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <!-- <style type="text/css">
 	*{
@@ -66,104 +67,45 @@ CSS
 	<!-- End service Area -->
 
 	<!-- Start Listagem-->
-	<hr>
-	<section>
-		<div class="row">
-			<div class="col-2">
-				<div class="container-fluid p-2">
-					<div class="col">
-						<form method="POST" onsubmit="return false;">
-							<div class="form-group  mb-3">
-								<h3>Menu</h3>
-								<label for="labelLocalizacao">Localização do Imovel</label>
-								<input type="text" name="fieldLocalizacao" class="single-input-secondary" id="fieldLocalizacao" placeholder="Digite rua, bairro ou cidade">
-							</div>
-	
-							<div class="form-group mt-1">
-								<label for="formGroupExampleInput2">Tipo de Imóveis</label>
-								
-								<div class="input-group-icon mt-10">
-									<div class="icon"><i class="fa fa-home" aria-hidden="true"></i></div>
-									<div class="form-select" id="default-select">
-										<select style="display: none;" id="fieldTipoImovel">
-										<option value="1">Mostrar Todos</option>
-										<option value="1">Casa Geminada</option>
-										<option value="1">Sobrado</option>
-										<option value="1">Bangalô</option>
-										<option value="1">Edícula</option>
-										<option value="1">Loft</option>
-										<option value="1">Apartamento</option>
-										<option value="1">Kitnet</option>
-										<option value="Flat">Flat</option>
-										</select>
-									</div>
-								</div>
-		
-							</div>
-							<div class="form-row mt-3">
-								<div class="col">
-									<label for="labelLocalizacao">Preço Minimo</label>
-									<input type="number" step=".01" name="fieldPrecoMin" class="single-input-secondary" id="fieldPrecoMin" placeholder="R$0,00">
-								</div>
-								<div class="col mb-2">
-									<label for="labelLocalizacao">Preço Maximo</label>
-									<input type="number"  step=".01" name="fieldPrecoMax" class="single-input-secondary" id="fieldPrecoMax" placeholder="R$0,00">
-								</div>
-							</div>
-	
-							<div class="form-group mt-2">
-								<label for="formGroupExampleInput2">Numero de quartos</label>
-								<select class="single-input-secondary" name="fieldNumeroQuartos" id="fieldNumeroQuartos">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="form-group mt-2 text-center ">
-								<input type="Submit" class="btn btn-primary  btn-lg btn-block" name="btnEnviarFiltro" value="Pesquisar" onclick="ajaxPesquisaResidencia()">
-								
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-10">
+	<?php
+	include_once("./theme/buscaPropriedades.php");
+								buscaPropriedades();
+	?>
 				<div class="container-fluid p-5">
 						<h3>Imóveis</h3>
 					<hr>
 					<div>
 						<div class="row">
-							<div class="single-property col-4">
+						<div class="single-property col-6">
 								<div class="images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
 								</div>
+
 								<div class="desc">
 									<div class="top d-flex justify-content-between">
-										<h4><a href="#">Residencia do Vitor</a></h4>
-										<h4>R$10.000</h4>
+										<h4><a href="#">04 Bed Duplex</a></h4>
+										<h4>$3.5M</h4>
 									</div>
 									<div class="middle">
 										<div class="d-flex justify-content-start">
-											<p>Quarto(s): 04</p>
-											<p>Banheiro(s): 03</p>
-											<p>Area: 200x200</p>
+											<p>Bed: 04</p>
+											<p>Bath: 03</p>
+											<p>Area: 750sqm</p>
 										</div>
 										<div class="d-flex justify-content-start">
-											<p>Piscina: <span class="gr">Yes</span></p>
-											<p>Internet: <span class="rd">No</span></p>
-											<p>Faxinera: <span class="rd">No</span></p>
+											<p>Pool: <span class="gr">Yes</span></p>
+											<p>NET: <span class="rd">No</span></p>
+											<p>Cleaning: <span class="rd">No</span></p>
 										</div>
 									</div>
 									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Gostei</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comentários</p>
+										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
 									</div>	
 								</div>	
 							</div>
-							<div class="single-property col-4">
+							<div class="single-property col-6">
 								<div class="images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
@@ -192,7 +134,7 @@ CSS
 									</div>	
 								</div>	
 							</div>
-							<div class="single-property col-4">
+							<div class="single-property col-6">
 								<div class=" images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
@@ -220,7 +162,7 @@ CSS
 									</div>	
 								</div>	
 							</div>
-							<div class="single-property col-4">
+							<div class="single-property col-6">
 								<div class="images">
 									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
 
@@ -263,17 +205,5 @@ CSS
 		?>
 		<!-- END FOOTER -->	
 
-		<script src="js/vendor/jquery-2.2.4.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>
-		<script src="https://unpkg.com/popper.js"></script>
-		<script src="js/jquery.ajaxchimp.min.js"></script>
-		<script src="js/jquery.nice-select.min.js"></script>
-		<script src="js/jquery.sticky.js"></script>
-		<script src="js/ion.rangeSlider.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/ajaxPesquisaResidencia.js"></script>
-		<script src="js/main.js"></script>
 	</body>
 	</html>
