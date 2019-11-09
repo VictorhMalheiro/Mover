@@ -38,8 +38,11 @@
                         <ul class="list">
                             <?php
                                 if($logged == true){
-                                    echo "<li>Olá ".$nomeUsuario."</li>";
-                                    echo "<li><a href='cadastrarImovel.php'>Cadastrar Imovel</a></li>";
+                                    ?>
+                                    <li><a href='cadastrarImovel.php'>Cadastrar Imovel</a></li>
+                                    <li><a href='dashboard.php'>Dashboard</a></li>
+                                    <li>Olá <?php echo $nomeUsuario; ?></li>
+                                    <?php
                                 }
                             ?>
                         </ul>

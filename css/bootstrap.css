@@ -1817,6 +1817,38 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 
+
+.btn-principal {
+  color: #fff;
+  background-color: #F41068;
+  border-color: #F41068;
+}
+
+.btn-principal:hover {
+  color: #fff;
+  background-color: #d90053;
+  border-color: #cc0077;
+}
+
+.btn-principal:focus, .btn-principal.focus {
+  box-shadow: 0 0 0 3px rgba(255, 0, 128, 0.5);
+}
+
+.btn-principal.disabled, .btn-principal:disabled {
+  background-color: #F41068;
+  border-color: #F41068;
+}
+
+.btn-principal:active, .btn-principal.active,
+.show > .btn-principal.dropdown-toggle {
+  background-color: #c70757;
+  background-image: none;
+  border-color: #cc005f;
+}
+
+
+
+
 .btn-primary {
   color: #fff;
   background-color: #007bff;
