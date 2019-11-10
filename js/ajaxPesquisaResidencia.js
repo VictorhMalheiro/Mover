@@ -1,10 +1,11 @@
+
 function ajaxPesquisaResidencia()
 {
-	localizacao = $("#fieldLocalizacao").val();
-	tipoImovel = $("#fieldTipoImovel").val();
-	precoMin = $("#fieldPrecoMin").val();
-	precoMax = $("#fieldPrecoMax").val();
-	numeroQuartos = $("#fieldNumeroQuartos").val();
+	localizacao = $("#localizacao").val();
+	tipoImovel = $("#tipoPropriedade").val();
+	quartos = $("#quartos").val();
+	banheiro = $("#banheiro").val();
+
 
 	    $.ajax
 	    ({
@@ -15,13 +16,19 @@ function ajaxPesquisaResidencia()
 		    {
 		    	  'localizacao' : localizacao,
 		          'tipoImovel' : tipoImovel,
-		          'precoMin' : precoMin,
-		          'precoMax' : precoMax,
-		          'numeroQuartos' : numeroQuartos,
+		          'quartos' : quartos,
+		          'banheiro' : banheiro,
 		    },
 		    success: function(retorno) 
 		    {
-		    	alert(retorno);
+		    	if(!retorno == true)
+		    	{
+		    		alert('A pesquisa foi mal sucedida');
+		    	}
+		    	else
+		    	{
+		    		alert("A Pesquisa foi bem sucedida");
+		    	}
 		    }
         });
 }
