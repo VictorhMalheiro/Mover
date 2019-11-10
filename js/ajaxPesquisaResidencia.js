@@ -23,11 +23,13 @@ function ajaxPesquisaResidencia()
 		    {
 		    	if(!retorno == true)
 		    	{
-		    		alert('A pesquisa foi mal sucedida');
+		    		/*alert('A pesquisa foi mal sucedida');*/
 		    	}
 		    	else
 		    	{
+
 		    		alert("A Pesquisa foi bem sucedida");
+	
 		    	}
 		    }
         });
