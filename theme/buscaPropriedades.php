@@ -2,7 +2,7 @@
     function buscaPropriedades(){
     ?>
     
-        <div class="search-field">
+        <div class="search-field ">
             <form class="search-form"  method="POST" onsubmit="return false;">
                 <div class="row">
                 <div class="col-lg-12  d-flex align-items-center justify-content-center toggle-wrap">
