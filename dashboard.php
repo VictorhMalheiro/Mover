@@ -40,9 +40,6 @@ session_start();
         ?>
         <!-- END HEADER -->
         <div class="container height pt-30">
-            <!-- <div class="row height align-items-center justify-content-center">                
-                
-            </div> -->
             <?php
                 include("controller/conexao.php");
                 $logged = false;

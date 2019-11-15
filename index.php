@@ -204,106 +204,17 @@
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-8 pb-40 header-text">
-							<h1>Our Top Rated Properties</h1>
+							<h1>Menores preços</h1>
 							<p>
-								Who are in extremely love with eco friendly system.
+								Está querendo economizar?
 							</p>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4">
-							<div class="single-property">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
-									<span>For Sale</span>
-								</div>
-								
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-										<p>Bed: 04</p>
-										<p>Bath: 03</p>
-										<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-										<p>Pool: <span class="gr">Yes</span></p>
-										<p>Internet: <span class="rd">No</span></p>
-										<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-property">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="assets/img/s2	.jpg" alt="">
-									<span>For Sale</span>
-								</div>
-								
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-										<p>Bed: 04</p>
-										<p>Bath: 03</p>
-										<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-										<p>Pool: <span class="gr">Yes</span></p>
-										<p>Internet: <span class="rd">No</span></p>
-										<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>	
-						<div class="col-lg-4">
-							<div class="single-property">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="assets/img/s3.jpg" alt="">
-									<span>For Sale</span>
-								</div>
-								
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-										<p>Bed: 04</p>
-										<p>Bath: 03</p>
-										<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-										<p>Pool: <span class="gr">Yes</span></p>
-										<p>Internet: <span class="rd">No</span></p>
-										<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>																											
+						<?php 
+							include_once("theme/blocosCasas.php");
+							casasValorAsc();
+						?>
 					</div>
 				</div>	
 			</section>
