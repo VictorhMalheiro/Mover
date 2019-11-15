@@ -26,8 +26,8 @@ if (isset($_SESSION['login']) && (isset($_SESSION['senha']))) {
     <meta charset="UTF-8">
     <!-- Site Title -->
     <title>iMovel</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+    rel="stylesheet">
     <!--
 			CSS
 			============================================= -->
@@ -42,11 +42,7 @@ if (isset($_SESSION['login']) && (isset($_SESSION['senha']))) {
     <!-- <script src="js/ajaxScripts.js"></script> -->
     <script src="js/vendor/jquery-2.2.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-
 </head>
-
-
 
 <?php
 
@@ -61,88 +57,49 @@ if (isset($_SESSION['login']) && (isset($_SESSION['senha']))) {
         <!-- START HEADER -->
         <?php
 			__header();
-			?>
+        ?>
         <!-- END HEADER -->
-
         <div class="container pt-30">
             <div class="row height align-items-center justify-content-center">
                 <div class="col-lg-10">
                     <div class="generic-banner-content">
-                        <h2 class="text-white text-center">Login</h2>
+                        <h2 class="text-white text-center">
+                            Cadastre-se
+                        </h2>
                         <p class="text-white">
-                            Faça login e gerencie sua conta.
+                            Faça seu cadastro e alugue imóveis
                         </p>
                         <div>
-                            <?php
-						if (isset($_POST['logar'])) {
-							$login = trim(strip_tags($_POST['login']));
-							$senha = trim(strip_tags($_POST['senha']));
-
-							$buscausuario = "SELECT * FROM `tab_usuario` WHERE login = :login and senha = :senha";
-
-							try {
-								$resultado = $conn->prepare($buscausuario);
-								$resultado->bindParam(':login', $login, PDO::PARAM_STR);
-								$resultado->bindParam(':senha', $senha, PDO::PARAM_STR);
-								$resultado->execute();
-
-								$contar = $resultado->rowCount();
-								$linha = $resultado->fetch(PDO::FETCH_ASSOC);
-
-								if ($contar > 0) {
-									$login = $_POST['login'];
-									$senha = $_POST['senha'];
-									$_SESSION['w_id_y'] = $linha['cod_usuario'];
-									$_SESSION['login'] = $login;
-									$_SESSION['senha'] = $senha;
-
-									?>
-                            <div class="row height align-items-center justify-content-center">
-                                <div class='lds-ellipsis'>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                            <?php
-									header("refresh: 3, url=dashboard.php");
-									exit;
-								} else {
-								?>
-                            <div class="alert alert-warning" role="alert">
-                                Dados incorretos
-                            </div>
-                            <?php
-								}
-							} catch (PDOException $e) {
-								echo $e;
-							}
-						}
-						?>
-                            <form method="POST" action="#">
+                            <form method="POST" action="controller/cadastrarUsuario.php">
                                 <div class="mt-10">
-                                    <input type="text" onblur="" name="login" placeholder="Usuário"
-                                        required="" class="single-input" autocomplete="username"
-                                    >
+                                    <input type="text" name="login" placeholder="Usuário"
+                                        required="" class="single-input">
+                                </div>
+                                <div class="mt-10">
+                                    <input type="text" name="nome" placeholder="Nome Completo"
+                                        required="" class="single-input">
                                 </div>
                                 <div class="mt-10"></div>
-                                <input type="password" name="senha" placeholder="Senha" 
-                                    autocomplete="current-password"
-                                    required="" class="single-input"
-                                >
+                                    <input 
+                                        type="password" name="senha" placeholder="Senha"
+                                        autocomplete="current-password"
+                                        required="" class="single-input"
+                                    >
 								</div>
-							<div class="col">
-                            <div class="mt-2 row align-items-center justify-content-center">
-								<input type="submit" name="logar" class="genric-btn success circle" value="Entrar">
-                                &nbsp
-                                <a href="cadastrar.php" class="genric-btn info-border circle arrow">
-                                    Cadastrar
-                                    <span class="lnr lnr-arrow-right"></span>
-                                </a>
-                            </div>
-                            </div>
-                            
+                                <div class="mt-10"></div>
+                                    <input 
+                                        type="email" 
+                                        name="email_usuario"
+                                        placeholder="email"
+                                        required="" class="single-input"
+                                    >
+								</div>
+							<div class="mt-2 row align-items-center justify-content-center">
+								<input type="submit" name="cadastrar" 
+                                    class="genric-btn success circle" value="Cadastrar"
+                                >
+							</div>
+
 							</form>
                         <div class="mt-2 row align-items-center justify-content-center">
                             <div id="resultado"></div>
@@ -162,8 +119,6 @@ if (isset($_SESSION['login']) && (isset($_SESSION['senha']))) {
 			?>
         <!-- END FOOTER -->
     </div>
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
         integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
     </script>

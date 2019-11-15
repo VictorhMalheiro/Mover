@@ -44,7 +44,7 @@ session_start();
     <section class="about-generic-area pb-100 p">
         <div class="container border-top-generic">
             <h3 class="about-title mt-30 mb-30">Cadastrar Imóvel</h3>
-            <form method="POST" action="#">
+            <form method="POST" onsubmit="return cadastrarImovelPHP()" action="#">
                 <h5>Envie as informações do seu imóvel</h5>
                 <div class="mt-10">
                     <input type="text" onblur="" name="CEP" placeholder="CEP" required="" class="single-input">
@@ -81,7 +81,7 @@ session_start();
                     </div>
                 </div>
                 <div class="mt-20 row align-items-center justify-content-center">
-                    <input type="submit" name="logar" class="genric-btn success circle" value="Enviar">
+                    <input type="submit" name="cadastrar" class="genric-btn success circle" value="Enviar">
                 </div>
 
             </form>
@@ -90,8 +90,6 @@ session_start();
     <?php
         __footer();
     ?>
-
-
 
     <!-- SCRIPTS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
@@ -109,5 +107,30 @@ session_start();
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
+    <script>
+    function cadastrarImovelPHP() {
+
+        var cep = $("input[name=cep]").val();
+        var nome = $("input[name=nome]").val();
+        var options = $("input[name=options]").val();
+        var endereco = $("input[name=endereco]").val();
+        var numero = $("input[name=numero]").val();
+        var complemento = $("input[name=complemento]").val();
+
+        $.post("controller/login.php", {
+                cep: cep,
+                nome: nome,
+                options: options,
+                endereco: endereco,
+                numero: numero,
+                complemento: complemento
+            },
+            function(data) {
+                $("#resultado").html(data)
+            })
+        return false;
+    }
+    </script>
 </body>
 </html>

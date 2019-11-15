@@ -1,5 +1,9 @@
+	<?php
+	ob_start();
+	session_start();	
+	?>
 	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+	<html lang="pt-br" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,7 +47,7 @@
 					<div class="row fullscreen align-items-center justify-content-center" style="height: 915px;">
 						<div class="banner-content col-lg-12 col-md-12">
 							<h1 class="text-uppercase">
-								We’re Real Estate King
+								Ache seu imóvel
 							</h1>
 							<?php
 								include_once("./theme/buscaPropriedades.php");
@@ -532,6 +536,18 @@
 			</footer>	
 			<!-- End footer Area -->		
 
+			<!-- SCRIPTS JS -->
+			<script src="js/vendor/jquery-2.2.4.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script type="98fd3c3ae924310ab1e0f775-text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+			<script src="js/vendor/bootstrap.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="js/jquery.ajaxchimp.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="js/jquery.nice-select.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="js/jquery.sticky.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="js/ion.rangeSlider.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="js/jquery.magnific-popup.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="js/main.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
 
 		</body>
 	</html>
