@@ -24,13 +24,13 @@
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/nice-select.css">
-		    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
-		    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="assets/css/linearicons.css">
+			<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+			<link rel="stylesheet" href="assets/css/nice-select.css">
+		    <link rel="stylesheet" href="assets/css/ion.rangeSlider.css" />
+		    <link rel="stylesheet" href="assets/css/ion.rangeSlider.skinFlat.css" />
+			<link rel="stylesheet" href="assets/css/bootstrap.css">
+			<link rel="stylesheet" href="assets/css/main.css">
 		</head>
 		<body>
 			<!-- Start Header Area -->
@@ -537,17 +537,17 @@
 			<!-- End footer Area -->		
 
 			<!-- SCRIPTS JS -->
-			<script src="js/vendor/jquery-2.2.4.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/vendor/jquery-2.2.4.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
 			<script type="98fd3c3ae924310ab1e0f775-text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-			<script src="js/vendor/bootstrap.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
-			<script src="js/jquery.ajaxchimp.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
-			<script src="js/jquery.nice-select.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
-			<script src="js/jquery.sticky.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
-			<script src="js/ion.rangeSlider.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/vendor/bootstrap.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/jquery.ajaxchimp.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/jquery.nice-select.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/jquery.sticky.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/ion.rangeSlider.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
-			<script src="js/jquery.magnific-popup.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
-			<script src="js/main.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/jquery.magnific-popup.min.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
+			<script src="assets/js/main.js" type="98fd3c3ae924310ab1e0f775-text/javascript"></script>
 
 		</body>
 	</html>

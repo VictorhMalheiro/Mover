@@ -21,16 +21,16 @@
 <!--
 CSS
 ============================================= -->
-<link rel="stylesheet" href="css/linearicons.css">=
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/nice-select.css">
-<link rel="stylesheet" href="css/ion.rangeSlider.css" />
-<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="assets/css/linearicons.css">=
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/nice-select.css">
+<link rel="stylesheet" href="assets/css/ion.rangeSlider.css" />
+<link rel="stylesheet" href="assets/css/ion.rangeSlider.skinFlat.css" />
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- <script src="js/vendor/jquery-2.2.4.min.js"></script>
+ <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <!-- <style type="text/css">
@@ -117,18 +117,18 @@ CSS
 		?>
 		<!-- END FOOTER -->	
   	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/ajaxPesquisaResidencia.js"></script>
+    <script src="assets/js/ajaxPesquisaResidencia.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/ion.rangeSlider.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/ion.rangeSlider.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/ajaxAlugaResidencia.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/ajaxAlugaResidencia.js"></script>
 
 	</body>
 	</html>
