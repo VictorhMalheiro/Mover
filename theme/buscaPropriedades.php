@@ -3,7 +3,7 @@
     ?>
     
         <div class="search-field ">
-            <form class="search-form"  method="POST" onsubmit="return false;">
+            <form class="search-form"  method="POST" action="../residencias.php">
                 <div class="row">
                 <div class="col-lg-12  d-flex align-items-center justify-content-center toggle-wrap">
                     <div class="row">
@@ -31,14 +31,13 @@
                 <div class="col-lg-3 col-md-6 col-xs-6">
                     <select name="tipoPropriedade" id="tipoPropriedade" class="app-select form-control" required="required" style="">
                         <option value="1" disabled selected>Tipo de Propriedade</option>
-                        <option value="2">Casa</option>
-                        <option value="3">Sobrado</option>
-                        <option value="4">Bangalô</option>
-                        <option value="5">Edícula</option>
-                        <option value="6">Loft</option>
-                        <option value="7">Apartamento</option>
-                        <option value="8">Kitnet</option>
-                        <option value="9">Flat</option>
+                        <option value="2">Apartamento</option>
+                        <option value="3">Casa</option>
+                        <option value="4">Edícula</option>
+                        <option value="5">Loft</option>
+                        <option value="6">Kitnet</option>
+                        <option value="7">Sobrado</option>
+                        <option value="8">Flat</option>
 
                     </select>
                 </div>
