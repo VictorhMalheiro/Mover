@@ -4,7 +4,7 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
+	<link rel="shortcut icon" href="assets/img/fav.png">
 	<!-- Author Meta -->
 	<meta name="author" content="CodePixar">
 	<!-- Meta Description -->
@@ -14,7 +14,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Real Estate</title>
+	<title>iMovel</title>
 
 	
 
@@ -53,10 +53,10 @@ CSS
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="img/header-bg.jpg" class="d-block w-100" alt="...">
+				<img src="assets/img/header-bg.jpg" class="d-block w-100" alt="...">
 			</div>
 			<div class="carousel-item">
-				<img src="img/header-bg.jpg" class="d-block w-100" alt="...">
+				<img src="assets/img/header-bg.jpg" class="d-block w-100" alt="...">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -78,7 +78,7 @@ CSS
 			<div class="row">
 				<div class="single-property col-6 ">
 					<div class="images">
-						<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
+						<img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
 					</div>
 
 					

@@ -14,7 +14,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Real Estate</title>
+	<title>Residencias - iMovel</title>
 
 	
 

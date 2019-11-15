@@ -8,7 +8,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
+		<link rel="shortcut icon" href="assets/img/fav.png">
 		<!-- Author Meta -->
 		<meta name="author" content="CodePixar">
 		<!-- Meta Description -->
@@ -18,7 +18,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Real Estate</title>
+		<title>iMovel</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -214,7 +214,7 @@
 						<div class="col-lg-4">
 							<div class="single-property">
 								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
+									<img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
 									<span>For Sale</span>
 								</div>
 								
@@ -245,7 +245,7 @@
 						<div class="col-lg-4">
 							<div class="single-property">
 								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s2	.jpg" alt="">
+									<img class="img-fluid mx-auto d-block" src="assets/img/s2	.jpg" alt="">
 									<span>For Sale</span>
 								</div>
 								
@@ -276,7 +276,7 @@
 						<div class="col-lg-4">
 							<div class="single-property">
 								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s3.jpg" alt="">
+									<img class="img-fluid mx-auto d-block" src="assets/img/s3.jpg" alt="">
 									<span>For Sale</span>
 								</div>
 								
@@ -317,7 +317,7 @@
 						  <div class="content">
 						    <a href="#" target="_blank">
 						      <div class="content-overlay"></div>
-						  		 <img class="content-image img-fluid d-block mx-auto" src="img/p1.jpg" alt="">
+						  		 <img class="content-image img-fluid d-block mx-auto" src="assets/img/p1.jpg" alt="">
 						      <div class="content-details fadeIn-bottom">
 						        <h3 class="content-title">San Fransisco Properties</h3>
 						      </div>
@@ -328,7 +328,7 @@
 							<div class="content">
 							    <a href="#" target="_blank">
 							      <div class="content-overlay"></div>
-							  		 <img class="content-image img-fluid d-block mx-auto" src="img/p2.jpg" alt="">
+							  		 <img class="content-image img-fluid d-block mx-auto" src="assets/img/p2.jpg" alt="">
 							      <div class="content-details fadeIn-bottom">
 							        <h3 class="content-title">New York Properties</h3>
 							      </div>
@@ -339,7 +339,7 @@
 									<div class="content">
 									    <a href="#" target="_blank">
 									      <div class="content-overlay"></div>
-									  		 <img class="content-image img-fluid d-block mx-auto" src="img/p3.jpg" alt="">
+									  		 <img class="content-image img-fluid d-block mx-auto" src="assets/img/p3.jpg" alt="">
 									      <div class="content-details fadeIn-bottom">
 									        <h3 class="content-title">Boston Properties</h3>
 									      </div>
@@ -350,7 +350,7 @@
 									<div class="content">
 									    <a href="#" target="_blank">
 									      <div class="content-overlay"></div>
-									  		 <img class="content-image img-fluid d-block mx-auto" src="img/p4.jpg" alt="">
+									  		 <img class="content-image img-fluid d-block mx-auto" src="assets/img/p4.jpg" alt="">
 									      <div class="content-details fadeIn-bottom">
 									        <h3 class="content-title">Elay Properties</h3>
 									      </div>
@@ -389,7 +389,7 @@
 							</div>																
 						</div>			
 						<div class="col-lg-6 about-right no-padding">
-							<img class="img-fluid" src="img/about-img.jpg" alt="">
+							<img class="img-fluid" src="assets/img/about-img.jpg" alt="">
 						</div>			
 					</div>
 				</div>	
@@ -503,14 +503,14 @@
 							<div class="single-footer-widget mail-chimp">
 								<h6 class="mb-20">Instragram Feed</h6>
 								<ul class="instafeed d-flex flex-wrap">
-									<li><img src="img/i1.jpg" alt=""></li>
-									<li><img src="img/i2.jpg" alt=""></li>
-									<li><img src="img/i3.jpg" alt=""></li>
-									<li><img src="img/i4.jpg" alt=""></li>
-									<li><img src="img/i5.jpg" alt=""></li>
-									<li><img src="img/i6.jpg" alt=""></li>
-									<li><img src="img/i7.jpg" alt=""></li>
-									<li><img src="img/i8.jpg" alt=""></li>
+									<li><img src="assets/img/i1.jpg" alt=""></li>
+									<li><img src="assets/img/i2.jpg" alt=""></li>
+									<li><img src="assets/img/i3.jpg" alt=""></li>
+									<li><img src="assets/img/i4.jpg" alt=""></li>
+									<li><img src="assets/img/i5.jpg" alt=""></li>
+									<li><img src="assets/img/i6.jpg" alt=""></li>
+									<li><img src="assets/img/i7.jpg" alt=""></li>
+									<li><img src="assets/img/i8.jpg" alt=""></li>
 								</ul>
 							</div>
 						</div>
