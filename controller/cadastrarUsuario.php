@@ -16,18 +16,11 @@
 
         $contar = $stmt->rowCount();
         if($contar>0){
-            echo "<div class='alert alert-info'>Que legal! Você foi cadastrado...</div>";
-        ?>
-            <div class="row height align-items-center justify-content-center">
-                <div class='lds-ellipsis'>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        <?php
-        header("refresh: 3, url=../dashboard.php");
+            echo "<div class='alert alert-info'>Que legal ".$_POST['nome']."
+            ! Você foi cadastrado, faça login para usar: <a href='login.php' 
+            class='genric-btn info-border circle arrow'>Entrar
+            <span class='lnr lnr-arrow-right'></span>
+        </a></div>";
         exit;
         }
         else{

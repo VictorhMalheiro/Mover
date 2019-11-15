@@ -70,27 +70,27 @@ if (isset($_SESSION['login']) && (isset($_SESSION['senha']))) {
                             Faça seu cadastro e alugue imóveis
                         </p>
                         <div>
-                            <form method="POST" action="controller/cadastrarUsuario.php">
-                                <div class="mt-10">
-                                    <input type="text" name="login" placeholder="Usuário"
-                                        required="" class="single-input">
-                                </div>
+                            <form method="POST" onsubmit="return insere()"
+                            action="controller/cadastrarUsuario.php">
                                 <div class="mt-10">
                                     <input type="text" name="nome" placeholder="Nome Completo"
                                         required="" class="single-input">
                                 </div>
+                                <div class="mt-10">
+                                    <input type="text" name="login" placeholder="Usuário"
+                                        required="" class="single-input">
+                                </div>
                                 <div class="mt-10"></div>
                                     <input 
-                                        type="password" name="senha" placeholder="Senha"
-                                        autocomplete="current-password"
+                                        type="email" 
+                                        name="email_usuario"
+                                        placeholder="Email"
                                         required="" class="single-input"
                                     >
 								</div>
                                 <div class="mt-10"></div>
                                     <input 
-                                        type="email" 
-                                        name="email_usuario"
-                                        placeholder="email"
+                                        type="password" name="senha" placeholder="Senha"
                                         required="" class="single-input"
                                     >
 								</div>
@@ -132,6 +132,8 @@ if (isset($_SESSION['login']) && (isset($_SESSION['senha']))) {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
