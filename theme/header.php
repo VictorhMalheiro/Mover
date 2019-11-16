@@ -1,6 +1,5 @@
 <?php 
-    include_once("controller/logout.php");
-    
+ 
     function __header(){
         include("controller/conexao.php");
         $logged = false;
@@ -68,7 +67,7 @@
                             <li><a href="generic.html">Generic</a></li>
                             <?php
                                 if($logged == true){
-                                    echo "<li><a href='?sair'>Sair</a></li>";
+                                    echo "<li><a href='./controller/logout.php'>Sair</a></li>";
                                 }else{
                                     echo "<li><a href='login.php'>Entrar</a></li>";
                                 }
