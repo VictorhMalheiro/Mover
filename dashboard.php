@@ -91,6 +91,21 @@ session_start();
                             <div class="row mt-20 mb-20">
                             <?php
                             foreach($linha as $listar){
+                                $tipo = $listar["tipo"];
+                                switch($tipo){
+                                    case "1":
+                                        $tipo = "Apartamento";
+                                        break;
+                                    case "2":
+                                        $tipo = "Casa";
+                                    break;
+                                    case "3":
+                                        $tipo = "Casa em Condominio";
+                                    break;
+                                    case "4":
+                                        $tipo = "kitnet";
+                                    break;
+                                }
                                 ?>
                                 <div class="col-lg-4">
                                     <div class="single-property">
@@ -101,7 +116,7 @@ session_start();
                                     
                                     <div class="desc">
                                         <div class="top d-flex justify-content-between">
-                                            <h4><a href="#"><?php echo $listar["tipo"]; ?></a></h4>
+                                            <h4><a href="#"><?php echo $tipo; ?></a></h4>
                                             <h4>R$ <?php echo $listar["aluguel"]; ?></h4>
                                         </div>
                                         <div class="middle">
@@ -112,8 +127,6 @@ session_start();
                                             </div>
                                             <div class="d-flex justify-content-start">
                                             <p>Garagem: <span class="gr"><?php echo $listar["garagem"]; ?></span></p>
-                                            <p>Internet: <span class="rd">Não</span></p>
-                                            <p>Cleaning: <span class="rd">Não</span></p>
                                             </div>
                                         </div>
                                         <div class="bottom d-flex justify-content-start">

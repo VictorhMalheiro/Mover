@@ -1,6 +1,17 @@
 <?php
+ob_start();
+session_start();
 	include_once("./conexao.php");
 
+    // $logged = false;
+    $login = null;
+    $senha = null;
+    if(isset($_SESSION['login']) && (isset($_SESSION['senha']))){
+        $logged = true;
+        $login = $_SESSION['login'];
+        $senha = $_SESSION['senha'];
+    }
+    
 	//SELECIONAR OS DADOS DO USUARIO
 	$buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
 	try{

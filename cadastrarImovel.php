@@ -49,7 +49,7 @@ session_start();
 
                 <h5 class="mt-10">Endereço</h5 class="mt-10">
                 <div class="mt-10">
-                    <input type="text" onblur="" name="CEP" placeholder="CEP" required="" class="single-input">
+                    <input type="text" onblur="" name="cep" placeholder="CEP" required="" class="single-input">
                 </div>
                 <div class="mt-10">
                     <input type="text" name="logradouro" placeholder="Logradouro ex: Av. Paulista" required="" class="single-input">
@@ -57,34 +57,34 @@ session_start();
 
                 <div class="row">    
                     <div class="form-select mt-15 col-lg-6 col-sm-12" id="default-select" "="">
-                        <select name="uf" style="display: none;">
-                            <option value="1">Acre - AC</option>
-                            <option value="1">Alagoas - AL</option>
-                            <option value="1">Amapá - AP</option>
-                            <option value="1">Amazonas - AM</option>                                
-                            <option value="1">Bahia  - BA</option>
-                            <option value="1">Ceará - CE</option>
-                            <option value="1">Distrito Federal  - DF</option>
-                            <option value="1">Espírito Santo - ES</option>
-                            <option value="1">Goiás - GO</option>
-                            <option value="1">Maranhão - MA</option>
-                            <option value="1">Mato Grosso - MT</option>
-                            <option value="1">Mato Grosso do Sul - MS</option>
-                            <option value="1">Minas Gerais - MG</option>                                
-                            <option value="1">Pará - PA</option>
-                            <option value="1">Paraíba - PB</option>
-                            <option value="1">Paraná - PR</option>
-                            <option value="1">Pernambuco - PE</option>
-                            <option value="1">Piauí - PI</option>
-                            <option value="1">Rio de Janeiro - RJ</option>
-                            <option value="1">Rio Grande do Norte - RN</option>
-                            <option value="1">Rio Grande do Sul - RS</option>                                
-                            <option value="1">Rondônia - RO</option>
-                            <option value="1">Roraima - RR</option>
-                            <option value="1">Santa Catarina - SC</option>
-                            <option value="1">São Paulo - SP</option>
-                            <option value="1">Sergipe - SE</option>
-                            <option value="1">Tocantins - TO</option>
+                        <select id="uf" style="display: none;">
+                            <option value="AC">Acre - AC</option>
+                            <option value="AL">Alagoas - AL</option>
+                            <option value="AP">Amapá - AP</option>
+                            <option value="AM">Amazonas - AM</option>                                
+                            <option value="BA">Bahia  - BA</option>
+                            <option value="CE">Ceará - CE</option>
+                            <option value="DF">Distrito Federal  - DF</option>
+                            <option value="ES">Espírito Santo - ES</option>
+                            <option value="GO">Goiás - GO</option>
+                            <option value="MA">Maranhão - MA</option>
+                            <option value="MT">Mato Grosso - MT</option>
+                            <option value="MS">Mato Grosso do Sul - MS</option>
+                            <option value="MG">Minas Gerais - MG</option>                                
+                            <option value="PA">Pará - PA</option>
+                            <option value="PB">Paraíba - PB</option>
+                            <option value="PR">Paraná - PR</option>
+                            <option value="PE">Pernambuco - PE</option>
+                            <option value="PI">Piauí - PI</option>
+                            <option value="RJ">Rio de Janeiro - RJ</option>
+                            <option value="RN">Rio Grande do Norte - RN</option>
+                            <option value="RS">Rio Grande do Sul - RS</option>                                
+                            <option value="RO">Rondônia - RO</option>
+                            <option value="RR">Roraima - RR</option>
+                            <option value="SC">Santa Catarina - SC</option>
+                            <option value="SP">São Paulo - SP</option>
+                            <option value="SE">Sergipe - SE</option>
+                            <option value="TO">Tocantins - TO</option>
                         </select>
                         <div class="nice-select" tabindex="0">
                             <span class="current">Estado - UF</span>
@@ -92,30 +92,30 @@ session_start();
                                 <li data-value="AC" class="option">Acre - AC</li>
                                 <li data-value="AL" class="option">Alagoas - AL</li>
                                 <li data-value="AP" class="option">Amapá - AP</li>
-                                <li data-value="AA" class="option">Amazonas - AM</li>                                
-                                <li data-value="AA" class="option">Bahia  - BA</li>
-                                <li data-value="AA" class="option">Ceará - CE</li>
-                                <li data-value="AA" class="option">Distrito Federal  - DF</li>
-                                <li data-value="AA" class="option">Espírito Santo - ES</li>
-                                <li data-value="AA" class="option">Goiás - GO</li>
-                                <li data-value="AA" class="option">Maranhão - MA</li>
-                                <li data-value="AA" class="option">Mato Grosso - MT</li>
-                                <li data-value="AA" class="option">Mato Grosso do Sul - MS</li>
-                                <li data-value="AA" class="option">Minas Gerais - MG</li>                                
-                                <li data-value="AA" class="option">Pará - PA</li>
-                                <li data-value="AA" class="option">Paraíba - PB</li>
-                                <li data-value="AA" class="option">Paraná - PR</li>
-                                <li data-value="AA" class="option">Pernambuco - PE</li>
-                                <li data-value="AA" class="option">Piauí - PI</li>
-                                <li data-value="AA" class="option">Rio de Janeiro - RJ</li>
-                                <li data-value="AA" class="option">Rio Grande do Norte - RN</li>
-                                <li data-value="AA" class="option">Rio Grande do Sul - RS</li>                                
-                                <li data-value="AA" class="option">Rondônia - RO</li>
-                                <li data-value="AA" class="option">Roraima - RR</li>
-                                <li data-value="AA" class="option">Santa Catarina - SC</li>
-                                <li data-value="AA" class="option">São Paulo - SP</li>
-                                <li data-value="AA" class="option">Sergipe - SE</li>
-                                <li data-value="AA" class="option">Tocantins - TO</li>
+                                <li data-value="AM" class="option">Amazonas - AM</li>                                
+                                <li data-value="BA" class="option">Bahia  - BA</li>
+                                <li data-value="CE" class="option">Ceará - CE</li>
+                                <li data-value="DF" class="option">Distrito Federal  - DF</li>
+                                <li data-value="ES" class="option">Espírito Santo - ES</li>
+                                <li data-value="GO" class="option">Goiás - GO</li>
+                                <li data-value="MA" class="option">Maranhão - MA</li>
+                                <li data-value="MT" class="option">Mato Grosso - MT</li>
+                                <li data-value="MS" class="option">Mato Grosso do Sul - MS</li>
+                                <li data-value="MG" class="option">Minas Gerais - MG</li>                                
+                                <li data-value="PA" class="option">Pará - PA</li>
+                                <li data-value="PB" class="option">Paraíba - PB</li>
+                                <li data-value="PR" class="option">Paraná - PR</li>
+                                <li data-value="PE" class="option">Pernambuco - PE</li>
+                                <li data-value="PI" class="option">Piauí - PI</li>
+                                <li data-value="RJ" class="option">Rio de Janeiro - RJ</li>
+                                <li data-value="RN" class="option">Rio Grande do Norte - RN</li>
+                                <li data-value="RS" class="option">Rio Grande do Sul - RS</li>                                
+                                <li data-value="RO" class="option">Rondônia - RO</li>
+                                <li data-value="RR" class="option">Roraima - RR</li>
+                                <li data-value="SC" class="option">Santa Catarina - SC</li>
+                                <li data-value="SP" class="option">São Paulo - SP</li>
+                                <li data-value="SE" class="option">Sergipe - SE</li>
+                                <li data-value="TO" class="option">Tocantins - TO</li>
                             </ul>
                         </div>
                     </div>
@@ -135,10 +135,10 @@ session_start();
                 </div>
                 <div class="row">
                     <div class="mt-15 col-lg-6 col-sm-12">
-                        <input type="text" name="area" placeholder="Área em m²" required="" class="single-input">
+                        <input type="number" name="area" placeholder="Área em m²" required="" step="0.01" class="single-input">
                     </div>
                     <div class="mt-15 col-lg-6 col-sm-12">
-                        <input type="text" name="aluguel" placeholder="Valor do aluguel" required="" class="single-input">
+                        <input type="number" required="" step="0.01" min="0" name="aluguel" class="single-input" placeholder="Valor do aluguel">
                     </div>
                 </div>
                 
@@ -146,46 +146,27 @@ session_start();
                     <!-- RADIOS -->
                     <div class="col">
                         <h5 class="mt-20">Tipo de imóvel</h5>
-                        <div class="mt-10  btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-principal active">
-                                <input type="radio" name="tipo" id="tipo" autocomplete="off" checked> Apartamento
-                            </label>
-                            <label class="btn  btn-principal">
-                                <input type="radio" name="tipo" id="tipo" autocomplete="off"> Kitnet
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="tipo" id="tipo" autocomplete="off"> Casa
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="tipo" id="tipo" autocomplete="off"> Casa em Condomínio
-                            </label>
+                        <div  class="form-select" id="default-select" "="">
+                            <select id="tipo" style="display: none;">
+                                <option value="1">Apartamento</option>
+                                <option value="2">Casa</option>
+                                <option value="3">Casa em Condominio</option>
+                                <option value="4">Kitnet</option>
+                            </select>
+                            <div class="nice-select" tabindex="0">
+                                <span class="current">Tipo de imóvel</span>
+                                <ul class="list">
+                                    <li data-value="1" class="option">Apartamento</li>
+                                    <li data-value="2" class="option">Casa</li>
+                                    <li data-value="3" class="option">Casa em Condominio</li>
+                                    <li data-value="4" class="option">Kitnet</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="col">
                         <h5 class="mt-20">Quantos quartos?</h5>
-                        <div class="mt-10  btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-principal active">
-                                <input type="radio" name="qtd_quarto" id="qtd_quarto" autocomplete="off" checked> 0
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_quarto" id="qtd_quarto" autocomplete="off"> 1
-                            </label>
-                            <label class="btn  btn-principal">
-                                <input type="radio" name="qtd_quarto" id="qtd_quarto" autocomplete="off"> 2
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_quarto" id="qtd_quartos" autocomplete="off"> 3
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_quarto" id="qtd_quarto" autocomplete="off"> 4
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_quarto" id="qtd_quarto" autocomplete="off"> 5
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_quarto" id="qtd_quarto" autocomplete="off"> 6
-                            </label>
-                        </div>
+                        <input type="number" required="" name="qtd_quarto" min="0" class="single-input" placeholder="Quantidade de Quartos">
                     </div>
                     <!-- FIM RADIOS -->
                 </div>
@@ -197,78 +178,15 @@ session_start();
                     <!-- RADIOS -->
                     <div class="col">
                         <h5 class="mt-20">Quantos banheiros?</h5>
-                        <div class="mt-10  btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-principal active">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off" checked> 0
-                            </label>
-                            <label class="btn  btn-principal">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off"> 1
-                            </label>
-                            <label class="btn  btn-principal">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off"> 2
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off"> 3
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off"> 4
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off"> 5
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="qtd_banheiro" id="qtd_banheiro" autocomplete="off"> 6
-                            </label>
-                        </div>
+                        <input type="number" name="qtd_banheiro" id="qtd_banheiro" required="" class="single-input" min="0">
                     </div>
                     <div class="col">
                         <h5 class="mt-20">Quantas suites?</h5>
-                        <div class="mt-10  btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-principal active">
-                                <input type="radio" name="options" id="apartamento" autocomplete="off" checked> 1
-                            </label>
-                            <label class="btn  btn-principal">
-                                <input type="radio" name="options" id="kitnet" autocomplete="off"> 2
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="options" id="casa" autocomplete="off"> 3
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="options" id="casaEmCondominio" autocomplete="off"> 4
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="options" id="casaEmCondominio" autocomplete="off"> 5
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="options" id="casaEmCondominio" autocomplete="off"> 6
-                            </label>
-                        </div>
+                        <input type="number" name="qtd_suite" id="qtd_suite" required="" class="single-input" min="0">
                     </div>
                     <div class="col">
                         <h5 class="mt-20">Possui garagem para quantos carros?</h5>
-                        <div class="mt-10  btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-principal active">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off" checked> 0
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off"> 1
-                            </label>
-                            <label class="btn  btn-principal">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off"> 2
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off"> 3
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off"> 4
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off"> 5
-                            </label>
-                            <label class="btn btn-principal">
-                                <input type="radio" name="garagem" id="garagem" autocomplete="off"> 6
-                            </label>
-                        </div>
+                        <input type="number" required="" name="garagem" min="0" class="single-input" placeholder="Quantidade de vagas na garagem">
                     </div>
                     <!-- FIM RADIOS -->
                 </div>
@@ -301,18 +219,19 @@ session_start();
     <script>
     function cadastrarImovelPHP() {
 
-        var qtd_quarto  = $("input[name=qtd_quarto]").val();
+        var qtd_quarto = $("input[name=qtd_quarto]").val();
         var qtd_banheiro  = $("input[name=qtd_banheiro]").val();
         var qtd_suite  = $("input[name=qtd_suite]").val();
         var area  = $("input[name=area]").val();
         var aluguel  = $("input[name=aluguel]").val();
-        var tipo  = $("input[name=tipo]").val();
+        var tipo = $("#tipo option:selected").val();
         var garagem  = $("input[name=garagem]").val();
         var logradouro = $("input[name=logradouro]").val();
         var numero = $("input[name=numero]").val();
         var bairro = $("input[name=bairro]").val();
         var cidade = $("input[name=cidade]").val();
-        var uf = $("select[option=uf]").val();
+        var uf = $("#uf option:selected").val();
+        // var uf = $("select[option=uf]").val();
         var cep = $("input[name=cep]").val();
 
         $.post("controller/conCadastrarImovel.php",
