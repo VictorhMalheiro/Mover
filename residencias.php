@@ -72,8 +72,8 @@ CSS
 
 	<!-- Start Listagem-->
 	<?php
-	include_once("./theme/buscaPropriedades.php");
-								buscaPropriedades();
+		include_once("./theme/buscaPropriedades.php");
+		buscaPropriedades();
 	?>
 				<div class="container-fluid p-5 ">
 						<h3>Imóveis</h3>

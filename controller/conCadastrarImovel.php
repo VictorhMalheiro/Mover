@@ -1,64 +1,76 @@
 <?php
-$sql = "INSERT INTO tab_imovel(id_casa) VALUES (:id_casa)";
-	
-	$stmt = $conn->prepare($sql);
+	include_once("./conexao.php");
 
-	$stmt->bindParam(':nome', $_POST['nome'], PDO::PARAM_STR);
-
-
-	$stmt->execute();
-	$last_id = $conn->lastInsertId($sql);
-
-	$contar = $stmt->rowCount();
-	if($contar>0){
-		echo "<div class='alert alert-info'>Que legal! Posto Cadastrado...</div>";
-	}
-	else{
-		echo "<div class='alert alert-dnanger'>Nossa! :( não deu, o posto não foi cadastrado!</div>";
-	}
-
-$buscaposto=$conn->query("SELECT * FROM `tb_posto`");
-$postos = $buscaposto->rowCount();
-echo "<button class='btn btn-primary' type='button'>
-		Quantidade de postos cadastrados <span class='badge'>".$postos."</span>
-	  </button>";
-			
-			
+	//SELECIONAR OS DADOS DO USUARIO
+	$buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
+	try{
+		$res = $conn->prepare($buscaUsuario);
+		$res->bindParam('login',$login, PDO::PARAM_STR);
+		$res->bindParam('senha',$senha, PDO::PARAM_STR);
+		$res-> execute();
+		$contar = $res->rowCount();
 		
+		if($contar == 1){
+			$linha = $res->fetchAll();
 			
-//--------->CADASTRAR IMAGEM<-----///
-if(isset($_POST['cadastrar'])){//VER SE EXISTE ALGO NO BOTAO CADASTRAR...
-	if(getimagesize($_FILES['imagem']['tmp_name']) == FALSE) {//VER SE EXISTE IMG
-	   echo "Por favor, selecione a imagem";
-	} else {// SE EXISTIR... ELE vai criar as variaveis e atribuir valores....
-	   $localizacao = addslashes($_FILES['imagem']['tmp_name']);
-	   $img_Nome 	= addslashes($_FILES['imagem']['name']);//NOME DA IMAGEM
-	   $img 		= file_get_contents($localizacao);
-	   $img 		= base64_encode($img);//CODIGO DA IMAGEM...
-	///  salva_imagem($img_Nome,$img,$last_id);//CHAMA A FUNÇÃO salva_imagem e coloca seus parametros de nome e codigo da img...
+			foreach($linha as $listar){
+				$nomeUsuario = $listar['nome'];
+				$cod_usuario = $listar['cod_usuario'];
+			}
+		}
+	}catch(PDOException $erro){
+		echo $erro;
 	}
-}  
 
+    $sql = "INSERT INTO tab_casa(cod_casa, qtd_quarto, qtd_banheiro, qtd_suite, area, aluguel, tipo, garagem, cod_usuario) 
+	VALUES (NULL, :qtd_quarto, :qtd_banheiro, :qtd_suite, :area, :aluguel, :tipo, :garagem, :cod_usuario)";
+	
+	$sql2 = "INSERT INTO tab_endereco_casa
+		(cod_endereco, logradouro, numero, bairro, cidade, uf, cep, cod_casa)
+	VALUES
+		(NULL, :logradouro, :numero, :bairro, :cidade, :uf, :cep, :cod_casa)";
+	
+	try{
+        $stmt = $conn->prepare($sql);
+		$stmt2 = $conn->prepare($sql2);
 
-//function salva_imagem($n,$i,$id) {
-   $ligacao = mysqli_connect('localhost', 'root', '','superuol_ecopostoatt');
-   if (!$ligacao) {
-	   die('Não conectado: ' . mysqli_error());
-   }
-	//$idant =  mysqli_insert_id();
-   $comando = "INSERT INTO	tb_imagemposto (nomeImgPost,arqImg,cod_posto) VALUES ('$img_Nome','$img','$last_id')";
-   //$comando = "INSERT INTO	tb_imagemposto (nomeImgPost,arqImg) VALUES ('$img_Nome','$img')";
+        $stmt->bindParam(':qtd_quarto', $_POST['qtd_quarto'], PDO::PARAM_INT);
+        $stmt->bindParam(':qtd_banheiro', $_POST['qtd_banheiro'], PDO::PARAM_INT);
+        $stmt->bindParam(':qtd_suite', $_POST['qtd_suite'], PDO::PARAM_INT);
+        $stmt->bindParam(':area', $_POST['area'], PDO::PARAM_STR);
+        $stmt->bindParam(':aluguel', $_POST['aluguel'], PDO::PARAM_STR);
+        $stmt->bindParam(':tipo', $_POST['tipo'], PDO::PARAM_STR);
+        $stmt->bindParam(':garagem', $_POST['garagem'], PDO::PARAM_STR);
+        $stmt->bindParam(':cod_usuario', $cod_usuario, PDO::PARAM_INT);
+		
+		$stmt->execute();
+		$last_id = $conn->lastInsertId($sql);
+		
+        $stmt2->bindParam(':logradouro', $_POST['logradouro'], PDO::PARAM_STR);
+        $stmt2->bindParam(':numero', $_POST['numero'], PDO::PARAM_STR);
+        $stmt2->bindParam(':bairro', $_POST['bairro'], PDO::PARAM_STR);
+        $stmt2->bindParam(':cidade', $_POST['cidade'], PDO::PARAM_STR);
+        $stmt2->bindParam(':uf', $_POST['uf'], PDO::PARAM_STR);
+        $stmt2->bindParam(':cep', $_POST['cep'], PDO::PARAM_STR);
+        $stmt2->bindParam(':cod_casa', $last_id, PDO::PARAM_INT);
 
-       
-   if( !$stmt = mysqli_prepare($ligacao, $comando) ) {
-	   echo "<div class='alert alert-dnanger'>Nossa! :( não deu, Falhou na hora de preparar - IMAGEM NÃO INSERIDA!</div>";
-   } else {
-	   echo "<div class='alert alert-info'>Imagem $img_Nome inserida com sucesso!</div>";
-   }
-	 $stmt->execute();
+		$stmt2->execute();
 
-
-
-   mysqli_close($ligacao);
-//}
+		
+        $contar = $stmt->rowCount();
+        $contar2 = $stmt2->rowCount();
+        if($contar > 0 && $contar2 > 0){
+            echo "<div class='alert alert-info'>Que legal ".$nomeUsuario."
+            ! Você cadastrou um imóvel veja : <a href='login.php' 
+            class='genric-btn info-border circle arrow'>Ver imóvel
+            <span class='lnr lnr-arrow-right'></span>
+        </a></div>";
+        exit;
+        }
+        else{
+            echo "<div class='alert alert-dnanger'>Nossa! :( não deu, o imóvel não foi cadastrado!</div>";
+        }
+    }catch(PDOException $e){
+		echo $e->getMessage();
+	}
 ?>
