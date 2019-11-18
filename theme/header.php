@@ -64,8 +64,8 @@
                             <li><a href="index.php">Home</a></li>
                             <li><a href="residencias.php">Imóveis</a></li>
                             <li><a href="index.php#property">Menor valor</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="generic.html">Generic</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                            <!-- <li><a href="generic.html">Generic</a></li> -->
                             <?php
                                 if($logged == true){
                                     echo "<li><a href='./controller/logout.php'>Sair</a></li>";

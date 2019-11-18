@@ -138,61 +138,37 @@
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-8 pb-40 header-text">
-							<h1>Why we are the best</h1>
+							<h1>Comprometimento</h1>
 							<p>
-								Who are in extremely love with eco friendly system.
+								A sua vontade de encontrar o seu espaço, é o nosso maior comprometimento!.
 							</p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-4 col-md-6 pb-30">
 							<div class="single-service">
-								<h4><span class="lnr lnr-user"></span>Expert Technicians</h4>
+								<h4><span class="lnr lnr-user"></span>Rapido e Facil!</h4>
 								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+									Locadores sempre a disposição e com maior facilidade de comunicação;
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-6 pb-30">
 							<div class="single-service">
-								<h4><span class="lnr lnr-license"></span>Professional Service</h4>
+								<h4><span class="lnr lnr-license"></span>Profissionais de Maestria</h4>
 								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+									Filtre e encontre o que precisa com precisão.
 								</p>								
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-6 pb-30">
 							<div class="single-service">
-								<h4><span class="lnr lnr-phone"></span>Great Support</h4>
+								<h4><span class="lnr lnr-phone"></span>Ótimo Suporte</h4>
 								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+									Equipe técnica com atendimento rapido e com maior Eficácia.
 								</p>								
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-service">
-								<h4><span class="lnr lnr-rocket"></span>Technical Skills</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>				
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-service">
-								<h4><span class="lnr lnr-diamond"></span>Highly Recomended</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>								
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-service">
-								<h4><span class="lnr lnr-bubble"></span>Positive Reviews</h4>
-								<p>
-									Usage of the Internet is becoming more common due to rapid advancement of technology and power.
-								</p>									
-							</div>
-						</div>						
 					</div>
 				</div>	
 			</section>
@@ -221,7 +197,7 @@
 			<!-- End property Area -->	
 				
 			<!-- Start city Area -->
-			<section class="city-area section-gap">
+			<!-- <section class="city-area section-gap">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-4 col-md-4 mb-10">
@@ -272,11 +248,11 @@
 						</div>
 					</div>
 				</div>	
-			</section>
+			</section> -->
 			<!-- End city Area -->
 
 			<!-- Start About Area -->
-			<section class="about-area">
+			<!-- <section class="about-area">
 				<div class="container-fluid">
 					<div class="row d-flex justify-content-end align-items-center">
 						<div class="col-lg-6 about-left">
@@ -304,7 +280,7 @@
 						</div>			
 					</div>
 				</div>	
-			</section>
+			</section> -->
 			<!-- End About Area -->		
 		
 			<!-- Start contact-info Area -->
@@ -312,35 +288,30 @@
 				<div class="container">
 					<div class="row">
 						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Visit Our Office</h4>
+							 <h4>Visite Nosso Escritório</h4>
 							 <p>
-							 	56/8, bir uttam qazi nuruzzaman 
-							 	road, west panthapath, kalabagan, 
-							 	Dhanmondi, Dhaka - 1205
+							 	Av. C-12, nº 1555 - Cristiano de Carvalho, Barretos - SP, 14781-449
 							 </p>                                   
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Let’s call us</h4>
+							 <h4>Converse com a gente</h4>
 							 <p>
-								Phone 01: 012-6532-568-9746 <br>
-								Phone 02: 012-6532-568-9748 <br>
-								FAX: 02-6532-568-746
+								Telefone Cel: (17)99999999
 							 </p>                                   
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Let’s Email Us</h4>
+							 <h4>Mande um email</h4>
 							 <p>
-								hello@colorlib.com <br>
-								mainhelpinfo@colorlib.com <br>
-								infohelp@colorlib.com
+								Vitor@Mover.com<br>
+								Filipe@Mover.com<br>
+								Evandro@Mover.com<br>
+								Bruno@Mover.com
 							 </p>                                   
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
 							 <h4>Customer Support</h4>
 							 <p>
-							 	support@colorlib.com <br>
-								emergencysupp@colorlib.com <br>
-								extremesupp@colorlib.com
+							 	suporte@Mover.com 
 							 </p>                                   
 						</div>																		
 					</div>
@@ -356,11 +327,11 @@
 	      					<div style=" width:100%;
 	                height: 545px;" id="map"></div>
 						</div>
-						<div class="col-lg-4 col-md-12 pt-100 pb-100">
+						<div class="col-lg-4 col-md-12  pb-100" style="margin-top: -100px !important;">
 							<form class="form-area" id="myForm" action="mail.php" method="post" class="contact-form text-right">
-								<input name="fname" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
-								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
-								<textarea class="common-textarea mt-10" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+								<input name="fname" placeholder="Digite seu nome..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
+								<input name="email" placeholder="Digite seu email..." pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
+								<textarea class="common-textarea mt-10" name="message" placeholder="Digite sua mensagem..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
 								<button class="primary-btn mt-20">Send Message<span class="lnr lnr-arrow-right"></span></button>
 								<div class="alert-msg">
 								</div>
@@ -377,23 +348,23 @@
 					<div class="row">
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>About Us</h6>
+								<h6>Sobre nos</h6>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+									Empresa qualificada e com grandes responsabilidades com seus usuarios.
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
+								<h6>Email Rapido</h6>
+								<p>Pergunte-nos</p>
 								<div class="" id="mc_embed_signup">
 
 										<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
 
 										<div class="d-flex flex-row">
 
-											<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+											<input class="form-control" name="EMAIL" placeholder="Diga..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
 
 
 				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
@@ -412,7 +383,7 @@
 						</div>						
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget mail-chimp">
-								<h6 class="mb-20">Instragram Feed</h6>
+								<h6 class="mb-20">Instragram</h6>
 								<ul class="instafeed d-flex flex-wrap">
 									<li><img src="assets/img/i1.jpg" alt=""></li>
 									<li><img src="assets/img/i2.jpg" alt=""></li>
@@ -427,22 +398,16 @@
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
+								<h6>Siga-nos</h6>
 								<div class="footer-social d-flex align-items-center">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
+
 								</div>
 							</div>
 						</div>							
 					</div>
-					<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						<p class="footer-text m-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</div>
+		
 				</div>
 			</footer>	
 			<!-- End footer Area -->		
