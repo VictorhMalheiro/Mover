@@ -136,8 +136,10 @@ session_start();
 
         if($contar > 0 && $contar2 > 0){
             echo "<div class='alert alert-info'>Que legal ".$nomeUsuario."
-            ! Você cadastrou um imóvel veja : <a href='login.php' 
-            class='genric-btn info-border circle arrow'>Ver imóvel
+            ! Você cadastrou um imóvel veja :
+            <a class='genric-btn info-border circle arrow'
+            href='./imovel.php?&cod_imovel=".$last_id."><span>Ver imóvel</span></a>
+            Ver imóvel
             <span class='lnr lnr-arrow-right'></span>
         </a></div>";
         exit;

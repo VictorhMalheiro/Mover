@@ -13,7 +13,10 @@
             $contar = $res->rowCount();
 
             if ($contar > 0) {
+                $imovel = 0;
                 foreach($linha as $listar){
+                    if($imovel <= 2){
+                    $imovel++;
                     $tipo = $listar["tipo"];
                     switch($tipo){
                         case "1":
@@ -60,8 +63,9 @@
                                 </div>	
                             </div>
                         </div>	
-                    </div>                    
+                    </div>
                     <?php
+                    }
                 }
             }
         }catch(PDOException $erro){
