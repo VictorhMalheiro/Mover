@@ -33,13 +33,23 @@ session_start();
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <section class="generic-banner relative">
+    <!-- <section class=" relative"> -->
         <!-- START HEADER -->
+        <section class="generic-banner relative">
+        <div class="container-fluid pt-100 pb-50 relative">
         <?php
             __header();
         ?>
+            <!-- <div class="container-fluid  relative"> -->
+                <h2 class="text-white about-title pt-50 text-center">Imóveis cadastrados</h2>
+            <!-- </div> -->
         <!-- END HEADER -->
-        <div class="container height pt-30">
+        </div>
+        </section>
+    <section class="about-generic-area pb-100 p">
+        <div class="container border-top-generic">
+            <!--  -->
+            <div class="col mb-30">
             <?php
                 include("controller/conexao.php");
                 $logged = false;
@@ -87,7 +97,6 @@ session_start();
 
                         if ($contar > 0) {
                             ?>
-                            <h1 class='mt-100 text-white'>Meus imóveis para locação</h1>
                             <div class="row mt-20 mb-20">
                             <?php
                             foreach($linha as $listar){
@@ -111,7 +120,7 @@ session_start();
                                     <div class="single-property">
                                     <div class="images">
                                         <img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
-                                        <span>Para alugar</span>
+                                        <a href="./imovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span>Ver imóvel</span></a>
                                     </div>
                                     
                                     <div class="desc">
@@ -155,8 +164,10 @@ session_start();
                 ?>
                         </div>
                         
+                        <div class="col mb-30 mt-30">
+            </div>
         </div>
-    </section>
+        </section>
     <?php
         __footer();
     ?>

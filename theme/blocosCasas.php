@@ -34,7 +34,7 @@
                         <div class="single-property">
                             <div class="images">
                                 <img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
-                                <span>Para alugar</span>
+                                <a href="./imovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span>Ver imóvel</span></a>
                             </div>
                             
                             <div class="desc">

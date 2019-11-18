@@ -34,7 +34,7 @@ session_start();
 </head>
 <body>
     <!-- <section class=" relative"> -->
-        <!-- START HEADER -->        
+        <!-- START HEADER -->
         <div class="container-fluid pt-120 relative">
         <?php
             __header();
@@ -44,7 +44,11 @@ session_start();
     <section class="about-generic-area pb-100 p">
         <div class="container border-top-generic">
             <h3 class="about-title mt-30 mb-30">Cadastrar Imóvel</h3>
-            <form method="POST" enctype="multipart/form-data" onsubmit="return cadastrarImovelPHP()" action="#">
+            <div class="col mb-30 mt-30">
+                <img id="img" class="img-fluid" alt=""/>
+            </div>
+            <!-- <form method="POST" enctype="multipart/form-data" onsubmit="return cadastrarImovelPHP()"  action="#"> -->
+            <form method="POST" enctype="multipart/form-data" action="controller/conCadastrarImovel.php">
                 <h5>Envie as informações do seu imóvel</h5>
 
                 <h5 class="mt-10">Endereço</h5 class="mt-10">
@@ -57,11 +61,11 @@ session_start();
 
                 <div class="row">    
                     <div class="form-select mt-15 col-lg-6 col-sm-12" id="default-select" "="">
-                        <select id="uf" style="display: none;">
+                        <select id="uf" name="uf" style="display: none;">
                             <option value="AC">Acre - AC</option>
                             <option value="AL">Alagoas - AL</option>
                             <option value="AP">Amapá - AP</option>
-                            <option value="AM">Amazonas - AM</option>                                
+                            <option value="AM">Amazonas - AM</option>
                             <option value="BA">Bahia  - BA</option>
                             <option value="CE">Ceará - CE</option>
                             <option value="DF">Distrito Federal  - DF</option>
@@ -70,7 +74,7 @@ session_start();
                             <option value="MA">Maranhão - MA</option>
                             <option value="MT">Mato Grosso - MT</option>
                             <option value="MS">Mato Grosso do Sul - MS</option>
-                            <option value="MG">Minas Gerais - MG</option>                                
+                            <option value="MG">Minas Gerais - MG</option>
                             <option value="PA">Pará - PA</option>
                             <option value="PB">Paraíba - PB</option>
                             <option value="PR">Paraná - PR</option>
@@ -78,7 +82,7 @@ session_start();
                             <option value="PI">Piauí - PI</option>
                             <option value="RJ">Rio de Janeiro - RJ</option>
                             <option value="RN">Rio Grande do Norte - RN</option>
-                            <option value="RS">Rio Grande do Sul - RS</option>                                
+                            <option value="RS">Rio Grande do Sul - RS</option>
                             <option value="RO">Rondônia - RO</option>
                             <option value="RR">Roraima - RR</option>
                             <option value="SC">Santa Catarina - SC</option>
@@ -147,7 +151,7 @@ session_start();
                     <div class="col">
                         <h5 class="mt-20">Tipo de imóvel</h5>
                         <div  class="form-select" id="default-select" "="">
-                            <select id="tipo" style="display: none;">
+                            <select id="tipo" name="tipo" style="display: none;">
                                 <option value="1">Apartamento</option>
                                 <option value="2">Casa</option>
                                 <option value="3">Casa em Condominio</option>
@@ -190,10 +194,15 @@ session_start();
                     </div>
                     <!-- FIM RADIOS -->
                 </div>
-                <div class="col">
-                        <h5 class="mt-20">Imagem</h5>
-                        <input type="file" required="" name="imagem" class="single-input" placeholder="Imagem">
+                <div class="row mt-20">
+                    <div class="col">
+                        <h5 class="mt-20 mb-25">Imagem</h5>
+                        <input type="file" required="" id="imagem" name="imagem" class="single-input" placeholder="Imagem">
                     </div>
+                </div>
+                <!-- <div class="single-gallery-image"> -->
+                    
+                <!-- </div> -->
                 <div class="mt-20 row align-items-center justify-content-center">
                     <input type="submit" name="cadastrar" class="genric-btn success circle" value="Enviar">
                     
@@ -206,7 +215,8 @@ session_start();
         __footer();
     ?>
 
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <!-- <script src="assets/js/vendor/jquery-2.2.4.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper/js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
@@ -220,6 +230,19 @@ session_start();
     <script src="assets/js/main.js"></script>	
 
     <script>
+    $(function(){
+        $('#imagem').change(function(){
+            const file = $(this)[0].files[0];
+            const fileReader = new FileReader();
+
+            fileReader.onloadend = function(){
+                $('#img').attr('src', fileReader.result);
+            }
+            fileReader.readAsDataURL(file);
+        })
+    })
+
+
     function cadastrarImovelPHP() {
 
         var qtd_quarto = $("input[name=qtd_quarto]").val();
@@ -234,9 +257,14 @@ session_start();
         var bairro = $("input[name=bairro]").val();
         var cidade = $("input[name=cidade]").val();
         var uf = $("#uf option:selected").val();
-        // var uf = $("select[option=uf]").val();
         var cep = $("input[name=cep]").val();
-        var formData = new FormData(this);
+
+        // var fd = new FormData();
+        var files = $('#imagem')[0].files[0];
+        // fd.append('imagem',files);
+
+        // var uf = $("select[option=uf]").val();
+        // var formData = new FormData(this);
         // var imagem = $("input[name=imagem]").file();
 
         $.post("controller/conCadastrarImovel.php",
@@ -253,8 +281,8 @@ session_start();
             bairro: bairro,
             cidade: cidade,
             uf: uf,
-            cep: cep,            
-            formData: formData            
+            cep: cep,
+            files: imagem
         },function(data) {
             $("#resultado").html(data)
         })
