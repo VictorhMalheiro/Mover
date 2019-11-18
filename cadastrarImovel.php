@@ -44,7 +44,7 @@ session_start();
     <section class="about-generic-area pb-100 p">
         <div class="container border-top-generic">
             <h3 class="about-title mt-30 mb-30">Cadastrar Imóvel</h3>
-            <form method="POST" onsubmit="return cadastrarImovelPHP()" action="#">
+            <form method="POST" enctype="multipart/form-data" onsubmit="return cadastrarImovelPHP()" action="#">
                 <h5>Envie as informações do seu imóvel</h5>
 
                 <h5 class="mt-10">Endereço</h5 class="mt-10">
@@ -190,7 +190,10 @@ session_start();
                     </div>
                     <!-- FIM RADIOS -->
                 </div>
-
+                <div class="col">
+                        <h5 class="mt-20">Imagem</h5>
+                        <input type="file" required="" name="imagem" class="single-input" placeholder="Imagem">
+                    </div>
                 <div class="mt-20 row align-items-center justify-content-center">
                     <input type="submit" name="cadastrar" class="genric-btn success circle" value="Enviar">
                     
@@ -233,6 +236,8 @@ session_start();
         var uf = $("#uf option:selected").val();
         // var uf = $("select[option=uf]").val();
         var cep = $("input[name=cep]").val();
+        var formData = new FormData(this);
+        // var imagem = $("input[name=imagem]").file();
 
         $.post("controller/conCadastrarImovel.php",
         {
@@ -248,7 +253,8 @@ session_start();
             bairro: bairro,
             cidade: cidade,
             uf: uf,
-            cep: cep            
+            cep: cep,            
+            formData: formData            
         },function(data) {
             $("#resultado").html(data)
         })

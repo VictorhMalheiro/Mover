@@ -33,6 +33,24 @@ session_start();
 		echo $erro;
 	}
 
+    $nome_imagem = $_FILES['formData']['name'];
+
+    $nome_img64 = base64_encode($nome_imagem);
+
+    $tipo_imagem = $_FILES['formData']['type'];
+
+    $tamanho_imagem = $_FILES['formData']['size'];
+
+    //condição para o tamanho da imagem...
+
+    if($tamanho_imagem <= 1000000){
+        $des = $_SERVER['DOCUMENT_ROOT'].'/assets/upload/';
+
+        move_uploaded_file($_FILES['imagem']['tmp_name'],$des.$nome_img64);
+    } else {
+        echo "<div class='alert alert-danger'>Tamanho da imagem não permitido</div>";
+    }
+
     $sql = "INSERT INTO tab_casa(cod_casa, qtd_quarto, qtd_banheiro, qtd_suite, area, aluguel, tipo, garagem, cod_usuario) 
 	VALUES (NULL, :qtd_quarto, :qtd_banheiro, :qtd_suite, :area, :aluguel, :tipo, :garagem, :cod_usuario)";
 	
