@@ -11,7 +11,45 @@ session_start();
         $login = $_SESSION['login'];
         $senha = $_SESSION['senha'];
     }
-    
+
+include_once("../theme/footer.php");
+    ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imóvel - iMovel</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="../assets/css/linearicons.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+    <!-- <section class=" relative"> -->
+        <!-- START HEADER -->
+        <div class="container-fluid pt-120 relative">
+        <?php
+            // __header();
+        ?>
+        <!-- END HEADER -->
+        </div>
+        <section class="about-generic-area pb-100 p">
+        <div class="container border-top-generic">
+            <h3 class="about-title mt-30 mb-30"></h3>
+            <div class="col mb-30 mt-30">
+            </div>
+
+    <?php
 	//SELECIONAR OS DADOS DO USUARIO
 	$buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
 	try{
@@ -122,3 +160,25 @@ session_start();
 		echo $e->getMessage();
 	}
 ?>
+
+</div>
+    </section>
+    <?php
+        __footer();
+    ?>
+
+    <!-- <script src="../assets/js/vendor/jquery-2.2.4.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper/js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js"></script>
+    <script src="../assets/js/vendor/bootstrap.min.js"></script>
+    
+    <script src="../assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="../assets/js/jquery.nice-select.min.js"></script>
+    <script src="../assets/js/jquery.sticky.js"></script>
+    <script src="../assets/js/ion.rangeSlider.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/main.js"></script>	
+</body>
+</html>
