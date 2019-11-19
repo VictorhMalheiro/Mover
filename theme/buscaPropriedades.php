@@ -9,7 +9,7 @@
             <div class="text-center" style="">
                 <h4 style="font-weight: 100" class="search-title">Aqui você negocia direto com o proprietário</h4>
             </div>
-            <form class="search-form"  method="POST" action="../residencias.php">
+            <form class="search-form"  method="POST" action="./residencias.php">
                 <div class="row">
                 <div class="col-lg-12  d-flex align-items-center justify-content-center toggle-wrap">
                     <div class="row">
@@ -22,39 +22,28 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-6">
-                    <select name="localizacao" id="localizacao" class="app-select form-control" required="required" style="">
+                    <select name="cidade" id="cidade" class="app-select form-control" required="required" style="">
                         <option value="1" disabled selected>Cidade</option>
-                        <option value="2">Barretos</option>
-                        <option value="3">Colina</option>
-                        <option value="4">Bebedouro</option>
+                        <option value="Barretos">Barretos</option>
+                        <option value="Colina">Colina</option>
+                        <option value="Bebedouro">Bebedouro</option>
                     </select>
              
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-xs-6">
-                    <select name="tipoPropriedade" id="tipoPropriedade" class="app-select form-control" required="required" style="">
-                        <option value="1" disabled selected>Tipo de Imovel</option>
-                        <option value="2">Apartamento</option>
-                        <option value="3">Casa</option>
-                        <option value="4">Casa Condominio</option>
-                        <option value="5">Kitnet</option>
+                    <select name="tipo" id="tipo" class="app-select form-control" required="required" style="">
+                        <option value="0" disabled selected>Tipo de Imovel</option>
+                        <option value="1">Apartamento</option>
+                        <option value="2">Casa</option>
+                        <option value="3">Casa Condominio</option>
+                        <option value="4">Kitnet</option>
 
                     </select>
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-6">
-                    <select name="quartos" id="quartos" class="app-select form-control" required="required" style="">
+                    <select name="qtd_quarto" id="qtd_quarto" class="app-select form-control" required="required" style="">
                         <option value="1" disabled selected>Quartos</option>
-                        <option value="2">1</option>
-                        <option value="3">2</option>
-                        <option value="4">3</option>
-                        <option value="5">4</option>
-                        <option value="6">5</option>
-                        <option value="7">6</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 col-xs-6">
-                    <select name="banheiro" id="banheiro" class="app-select form-control" required="required" style="">
-                        <option value="1" disabled selected>Suites</option>
                         <option value="2">1</option>
                         <option value="3">2</option>
                         <option value="4">3</option>
@@ -65,7 +54,7 @@
                 </div>
                 									    
                 <div class="mx-auto d-flex justify-content-end">
-                    <button class="primary-btn mt-50" style="height: 45px;" onclick="ajaxPesquisaResidencia();">Pesquisar 
+                    <button class="primary-btn mt-50" style="height: 45px;"">Pesquisar 
                     <span class="lnr lnr-arrow-right"></span></button>
                 </div>						  
                 </div>

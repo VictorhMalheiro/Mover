@@ -144,8 +144,7 @@ include_once("../theme/footer.php");
         echo $mensagem;
 
         if($contar > 0 && $contar2 > 0){
-            echo "<div class='alert alert-info'>Que legal ".$nomeUsuario."
-            ! Você cadastrou um imóvel veja :
+            echo "<div class='alert alert-info'>Que legal! Você cadastrou um imóvel veja :
             <a class='genric-btn info-border circle arrow'
             href='./imovel.php?&cod_imovel=".$last_id."><span>Ver imóvel</span></a>
             Ver imóvel
