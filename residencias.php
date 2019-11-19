@@ -77,7 +77,8 @@ CSS
 		buscaPropriedades();
 	?>
 				<!-- CARREGAMENTO DE IMOVEIS -->
-				<section class="property-area section-gap relative" id="property">
+				<section class="about-generic-area section-gap relative" id="property">
+				
 				<div class="container">		
 					<div class="row">
 					<?php
@@ -90,7 +91,9 @@ CSS
                     $buscaImovel = "SELECT * FROM tab_casa AS tc
                         INNER JOIN tab_imagem_casa AS tic
                             ON tc.cod_casa = tic.cod_casa
-                    WHERE qtd_quarto = '$qtd_quartoIM'  AND  tipo = '$tipoIM'";
+						INNER JOIN tab_endereco_casa AS tec
+							ON tc.cod_casa = tec.cod_casa
+                    WHERE qtd_quarto = '$qtd_quartoIM'  AND  tipo = '$tipoIM' AND cidade = '$cidadeBusca'";
                     // cod_casa,qtd_quarto, qtd_banheiro, qtd_suite, area, aluguel, tipo, garagem, cod_usuario
                     try{
                         $res = $conn->prepare($buscaImovel);
@@ -121,7 +124,7 @@ CSS
                                     break;
                                 }
                                 ?>
-                                <div class="col-lg-4">
+                                <div class="col">
                                     <div class="single-property">
                                     <div class="images">
                                         <img class="img-fluid mx-auto d-block" src="<?php echo "./".$listar["caminho_imagem"]."/".$listar["nome_imagem"]; ?>" alt="">
@@ -143,10 +146,6 @@ CSS
                                             <p>Garagem: <span class="gr"><?php echo $listar["garagem"]; ?></span></p>
                                             </div>
                                         </div>
-                                        <div class="bottom d-flex justify-content-start">
-                                            <p><a href="./controller/deletarImovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span></span>Excluir</a></p>
-                                            <p><a href="./editarImovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span></span>Editar</a></p>
-                                        </div>	
                                     </div>	
                                 </div>   
                                 </div>
@@ -161,6 +160,7 @@ CSS
                         echo $erro;
                     }
                 ?>
+				
 					</div>
 				</div>	
 			</section>
