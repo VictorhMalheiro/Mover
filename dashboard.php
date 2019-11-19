@@ -142,7 +142,7 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="bottom d-flex justify-content-start">
-                                            <p><span></span>Excluir</p>
+                                            <p><a href="./controller/deletarImovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span></span>Excluir</a></p>
                                             <p><a href="./editarImovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span></span>Editar</a></p>
                                         </div>	
                                     </div>	
