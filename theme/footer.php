@@ -2,10 +2,11 @@
     function __footer(){
     ?>
         <!-- start footer Area -->		
-			<footer class="footer-area section-gap">
+			<div class="text-center">
+			<footer class="footer-area section-gap ">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3  col-md-6 col-sm-6">
+						<div class="col-lg-3  col-md-6 col-sm-6 ">
 							<div class="single-footer-widget">
 								<h6>Sobre nos</h6>
 								<p>
@@ -15,14 +16,11 @@
 						</div>
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Volte ao Topo</h6>
+								<h6>Volte a Home</h6>
 								<p></p>
 								<div class="" id="mc_embed_signup">
-
-										
-
-										<div class="d-flex flex-row">
-				                            	<a href="index.php"><button class="primary-btn" href="index.php">Inicio<span class="lnr lnr-arrow-right"></span><div></div></button></a>
+										<div class="flex-row">
+				                            	<a href="index.php"><button class="primary-btn" href="index.php" >Home<span class="lnr lnr-arrow-right"></span><div></div></button></a>
 				                            	<div style="position: absolute; left: -5000px;">
 													
 												</div>
@@ -35,9 +33,9 @@
 									
 								</div>
 							</div>
-						</div>			
+						</div>						
 						<div class="col-lg-3  col-md-6 col-sm-6">
-							<div class="single-footer-widget mail-chimp">
+							<div class="single-footer-widget mail-chimp " >
 								<h6 class="mb-20">Instragram</h6>
 								<ul class="instafeed d-flex flex-wrap">
 									<li><img src="assets/img/i1.jpg" alt=""></li>
@@ -52,9 +50,9 @@
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
+							<div class="single-footer-widget ">
 								<h6>Siga-nos</h6>
-								<div class="footer-social d-flex align-items-center">
+								<div class="footer-social d-flex align-items-center" style="margin-left: 40% !important;">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
 
@@ -65,6 +63,7 @@
 		
 				</div>
 			</footer>	
+		</div>	
             <!-- End footer Area -->
     <?php
     }
