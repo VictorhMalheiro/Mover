@@ -42,6 +42,7 @@
                                     ?>
                                     <li><a href='cadastrarImovel.php'>Cadastrar Imovel</a></li>
                                     <li><a href='dashboard.php'>Dashboard</a></li>
+                                    <li><a href='perfil.php'>Perfil</a></li>
                                     <li>Olá <?php echo $nomeUsuario; ?></li>
                                     <?php
                                 }
