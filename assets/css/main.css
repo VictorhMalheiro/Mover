@@ -10,6 +10,9 @@
 
 
 /* LOADER CSS */
+
+
+
 .lds-ellipsis {
   display: inline-block;
   position: relative;
@@ -3013,6 +3016,13 @@ h6 {
     display: none;
   }
 }
+
+@media (max-width: 991.98px)
+ { 
+  .frame{
+    width: 90% !important;
+  }
+ }
 
 .generic-content h1 {
   font-weight: 600;

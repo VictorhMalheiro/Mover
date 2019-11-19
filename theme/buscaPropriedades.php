@@ -68,7 +68,7 @@
                 </div>
                 									    
                 <div class="mx-auto d-flex justify-content-end">
-                    <button class="primary-btn mt-50" style="height: 45px;" onclick="ajaxPesquisaResidencia();">Pesquisar propriedades
+                    <button class="primary-btn mt-50" style="height: 45px;" onclick="ajaxPesquisaResidencia();">Pesquisar 
                     <span class="lnr lnr-arrow-right"></span></button>
                 </div>						  
                 </div>
