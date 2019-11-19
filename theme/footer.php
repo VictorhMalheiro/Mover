@@ -15,20 +15,16 @@
 						</div>
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Email Rapido</h6>
-								<p>Pergunte-nos</p>
+								<h6>Volte ao Topo</h6>
+								<p></p>
 								<div class="" id="mc_embed_signup">
 
-										<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										
 
 										<div class="d-flex flex-row">
-
-											<input class="form-control" name="EMAIL" placeholder="Diga..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				                            	<a href="index.php"><button class="primary-btn" href="index.php">Inicio<span class="lnr lnr-arrow-right"></span><div></div></button></a>
 				                            	<div style="position: absolute; left: -5000px;">
-													<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+													
 												</div>
 				                          	
 											<!-- <div class="col-lg-4 col-md-4">
@@ -36,10 +32,10 @@
 											</div>  -->
 										</div>		
 										<div class="info"></div>
-										</form>
+									
 								</div>
-								</div>
-						</div>						
+							</div>
+						</div>			
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget mail-chimp">
 								<h6 class="mb-20">Instragram</h6>

@@ -149,7 +149,7 @@
 							<div class="single-service">
 								<h4><span class="lnr lnr-user"></span>Rapido e Facil!</h4>
 								<p>
-									Locadores sempre a disposição e com maior facilidade de comunicação;
+									Locadores sempre a disposição e com maior facilidade de comunicação.
 								</p>
 							</div>
 						</div>
@@ -165,7 +165,7 @@
 							<div class="single-service">
 								<h4><span class="lnr lnr-phone"></span>Ótimo Suporte</h4>
 								<p>
-									Equipe técnica com atendimento rapido e com maior Eficácia.
+									Equipe técnica com atendimento rapido e com maior eficácia.
 								</p>								
 							</div>
 						</div>
@@ -284,6 +284,7 @@
 			<!-- End About Area -->		
 		
 			<!-- Start contact-info Area -->
+
 			<section class="contact-info-area section-gap">
 				<div class="container">
 					<div class="row">
@@ -300,7 +301,7 @@
 							 </p>                                   
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Mande um email</h4>
+							 <h4>Emails Pessoais</h4>
 							 <p>
 								Vitor@Mover.com<br>
 								Filipe@Mover.com<br>
@@ -309,7 +310,7 @@
 							 </p>                                   
 						</div>
 						<div class="single-info col-lg-3 col-md-6">
-							 <h4>Customer Support</h4>
+							 <h4>Email para Suporte Avançado</h4>
 							 <p>
 							 	suporte@Mover.com 
 							 </p>                                   
@@ -318,21 +319,32 @@
 				</div>	
 			</section>
 			<!-- End contact-info Area -->
-
+                        
 			<!-- Start Contact Area -->
 			<section class="contact-area" id="contact">
+				   <iframe
+                                width="40%"
+                                height="450"
+                                frameborder="0" style="border:0; margin-left: 5% !important;"
+                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTp_N3HuzLb2L2DXGC0te8fnb2gM2F0WU
+                                &q=<?php echo htmlspecialchars($logradouro); ?>
+                                &attribution_source=Eco+Posto+Maps+Embed+API
+                                &attribution_web_url=http://ecoposto.superuol.com/
+                                " allowfullscreen>
+                    </iframe>
 				<div class="container-fluid">
 					<div class="row align-items-center d-flex justify-content-start">
 						<div class="col-lg-6 col-md-12 contact-left no-padding">
 	      					<div style=" width:100%;
 	                height: 545px;" id="map"></div>
 						</div>
-						<div class="col-lg-4 col-md-12  pb-100" style="margin-top: -100px !important;">
+						<div class="col-lg-4 col-md-12  pb-100" style="margin-top: -60% !important;">
 							<form class="form-area" id="myForm" action="mail.php" method="post" class="contact-form text-right">
+								<h4 class="text-dark">Mensagem para o Suporte :</h4>
 								<input name="fname" placeholder="Digite seu nome..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
 								<input name="email" placeholder="Digite seu email..." pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
 								<textarea class="common-textarea mt-10" name="message" placeholder="Digite sua mensagem..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-								<button class="primary-btn mt-20">Send Message<span class="lnr lnr-arrow-right"></span></button>
+								<button class="primary-btn mt-20">Enviar Mensagem<span class="lnr lnr-arrow-right"></span></button>
 								<div class="alert-msg">
 								</div>
 							</form>
@@ -356,20 +368,16 @@
 						</div>
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Email Rapido</h6>
-								<p>Pergunte-nos</p>
+								<h6>Volte ao Topo</h6>
+								<p></p>
 								<div class="" id="mc_embed_signup">
 
-										<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										
 
 										<div class="d-flex flex-row">
-
-											<input class="form-control" name="EMAIL" placeholder="Diga..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-
-
-				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+				                            	<a href="index.php"><button class="primary-btn" href="index.php">Inicio<span class="lnr lnr-arrow-right"></span><div></div></button></a>
 				                            	<div style="position: absolute; left: -5000px;">
-													<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+													
 												</div>
 				                          	
 											<!-- <div class="col-lg-4 col-md-4">
@@ -377,9 +385,9 @@
 											</div>  -->
 										</div>		
 										<div class="info"></div>
-										</form>
+									
 								</div>
-								</div>
+							</div>
 						</div>						
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget mail-chimp">
