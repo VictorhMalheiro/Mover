@@ -142,8 +142,8 @@ session_start();
                                             </div>
                                         </div>
                                         <div class="bottom d-flex justify-content-start">
-                                            <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                                            <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+                                            <p><a href="./controller/deletarImovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span></span>Excluir</a></p>
+                                            <p><a href="./editarImovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span></span>Editar</a></p>
                                         </div>	
                                     </div>	
                                 </div>   
