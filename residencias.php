@@ -75,131 +75,17 @@ CSS
 		include_once("./theme/buscaPropriedades.php");
 		buscaPropriedades();
 	?>
-				<div class="container-fluid p-5 ">
-						<h3>Imóveis</h3>
-					<hr>
-					<div>
-						<div class="row">
-						<div class="single-property col-6">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
-								</div>
-
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="comprarResidencia.php">Casa 1</a></h4>
-										<h4>R$1000</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-											<p>Quartos: 04</p>
-											<p>Banheiro: 03</p>
-											<p>Area: 20x20</p>
-										</div>
-										<div class="d-flex justify-content-start">
-											<p>Garagem: <span class="gr">Yes</span></p>
-											<p>Internet: <span class="rd">No</span></p>
-											<p>Tipo:</p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Curtida(s)</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comentario(s)</p>
-									</div>	
-								</div>	
-							</div>
-							<div class="single-property col-6">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
-
-								</div>
-
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-											<p>Bed: 04</p>
-											<p>Bath: 03</p>
-											<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-											<p>Pool: <span class="gr">Yes</span></p>
-											<p>Internet: <span class="rd">No</span></p>
-											<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-							<div class="single-property col-6">
-								<div class=" images">
-									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
-
-								</div>
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-											<p>Bed: 04</p>
-											<p>Bath: 03</p>
-											<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-											<p>Pool: <span class="gr">Yes</span></p>
-											<p>Internet: <span class="rd">No</span></p>
-											<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-							<div class="single-property col-6">
-								<div class="images">
-									<img class="img-fluid mx-auto d-block" src="img/s1.jpg" alt="">
-
-								</div>
-
-								<div class="desc">
-									<div class="top d-flex justify-content-between">
-										<h4><a href="#">04 Bed Duplex</a></h4>
-										<h4>$3.5M</h4>
-									</div>
-									<div class="middle">
-										<div class="d-flex justify-content-start">
-											<p>Bed: 04</p>
-											<p>Bath: 03</p>
-											<p>Area: 750sqm</p>
-										</div>
-										<div class="d-flex justify-content-start">
-											<p>Pool: <span class="gr">Yes</span></p>
-											<p>Internet: <span class="rd">No</span></p>
-											<p>Cleaning: <span class="rd">No</span></p>
-										</div>
-									</div>
-									<div class="bottom d-flex justify-content-start">
-										<p><span class="lnr lnr-heart"></span> 15 Likes</p>
-										<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-									</div>	
-								</div>	
-							</div>
-						</div>
+				<!-- CARREGAMENTO DE IMOVEIS -->
+				<section class="property-area section-gap relative" id="property">
+				<div class="container">		
+					<div class="row">
+						<?php 
+							include_once("theme/carregaImoveis.php");
+							casasValorAsc();
+						?>
 					</div>
-				</div> 
-			</div>
-		</div>
-	</section>
+				</div>	
+			</section>
 
 		<!-- FOOTER START -->
 		<?php

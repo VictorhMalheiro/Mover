@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-6">
                     <select name="localizacao" id="localizacao" class="app-select form-control" required="required" style="">
-                        <option value="1" disabled selected>Localização</option>
+                        <option value="1" disabled selected>Cidade</option>
                         <option value="2">Barretos</option>
                         <option value="3">Colina</option>
                         <option value="4">Bebedouro</option>
@@ -33,14 +33,11 @@
 
                 <div class="col-lg-3 col-md-6 col-xs-6">
                     <select name="tipoPropriedade" id="tipoPropriedade" class="app-select form-control" required="required" style="">
-                        <option value="1" disabled selected>Tipo de Propriedade</option>
+                        <option value="1" disabled selected>Tipo de Imovel</option>
                         <option value="2">Apartamento</option>
                         <option value="3">Casa</option>
-                        <option value="4">Edícula</option>
-                        <option value="5">Loft</option>
-                        <option value="6">Kitnet</option>
-                        <option value="7">Sobrado</option>
-                        <option value="8">Flat</option>
+                        <option value="4">Casa Condominio</option>
+                        <option value="5">Kitnet</option>
 
                     </select>
                 </div>
@@ -57,7 +54,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-xs-6">
                     <select name="banheiro" id="banheiro" class="app-select form-control" required="required" style="">
-                        <option value="1" disabled selected>Banheiros</option>
+                        <option value="1" disabled selected>Suites</option>
                         <option value="2">1</option>
                         <option value="3">2</option>
                         <option value="4">3</option>
