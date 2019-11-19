@@ -70,7 +70,8 @@ session_start();
                 // ";
                 $buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
 
-                try{
+                
+                try {
 
                     $res = $conn->prepare($buscaUsuario);
                     $res->bindParam('login',$login, PDO::PARAM_STR);
@@ -90,10 +91,13 @@ session_start();
                         }
                     }
 
-    
 
 
-            ?>  
+                } catch (PDOException $e) {
+                    echo $e;
+                }
+                
+                ?>
  <div class="container-fluid">
     <div class="row my-2">
         <div class="col-lg-8 order-lg-2 mt-5">
@@ -118,14 +122,32 @@ session_start();
                         <h5 class="mb-4 ml-2">Sobre:</h5>
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Login</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text" value="<?php echo $loginUsuario; ?>" disabled>
+
+                                <input class="form-control" type="text" value="<?php echo $nomeUsuario ?>" disabled>
+
                             </div>
                         </div>
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Email</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="email" value="<?php echo $email; ?>" disabled>
+
+                                <input class="form-control" type="email" value="<?php echo $email ?>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row ml-5">
+                            <label class="col-lg-3 col-form-label form-control-label">Endereço</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text"  value="Rua Geronimo" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row ml-5">
+                            <label class="col-lg-3 col-form-label form-control-label">Cidade/UF</label>
+                            <div class="col-lg-6">
+                                <input class="form-control" type="text" value="Barretos" disabled>
+                            </div>
+                            <div class="col-lg-3">
+                                <input class="form-control" type="text"  value="SãoPaulo" disabled>
+
                             </div>
                         </div>
 
