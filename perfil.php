@@ -68,9 +68,9 @@ session_start();
                 //         ON tu.cod_usuario = teu.cod_usuario
                 // WHERE tu.login=:$login AND tu.senha = $senha
                 // ";
-                $buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
-
-                
+                $buscaUsuario = "SELECT * FROM tab_usuario
+                WHERE login=:login AND senha=:senha";
+                 
                 try {
 
                     $res = $conn->prepare($buscaUsuario);
@@ -91,103 +91,59 @@ session_start();
                         }
                     }
 
+                    $buscaTelefone = "SELECT * FROM tab_tel
+                    WHERE cod_usuario = $cod_usuario";
+
+                    $res = $conn->prepare($buscaTelefone);
+                    $res-> execute();
+                    $contar2 = $res->rowCount();
+
+                    if($contar2 == 1){
+                        $linha = $res->fetchAll();
+                        foreach($linha as $listar){
+                            $cod_tel = $listar['cod_tel'];
+                            $tel_fixo = $listar['tel_fixo'];
+                            $tel_celular = $listar['tel_celular'];
+                            $cod_usuarioTel = $listar['cod_usuario'];
+                        }
+                    }
 
 
+                    $buscaEndereco = "SELECT * FROM tab_endereco_usuario
+                    WHERE cod_usuario = $cod_usuario";
+                    $res = $conn->prepare($buscaEndereco);
+                    $res-> execute();
+
+                    $contar2 = $res->rowCount();
+
+                    if($contar2 == 1){
+                        $linha = $res->fetchAll();
+                        foreach($linha as $listar){
+                            $cod_usuarioEnd = $listar['cod_usuario'];
+                            $logradouro = $listar['logradouro'];
+                            $numero = $listar['numero'];
+                            $bairro = $listar['bairro'];
+                            $cidade = $listar['cidade'];
+                            $uf = $listar['uf'];
+                            $cep = $listar['cep'];
+                            $cod_usuario = $listar['cod_usuario'];
+                        }
+                    }
                 } catch (PDOException $e) {
                     echo $e;
                 }
                 
                 ?>
  <div class="container-fluid">
-    <div class="row my-2">
-        <div class="col-lg-8 order-lg-2 mt-5">
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Perfil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" data-target="#messages" data-toggle="tab" class="nav-link">Mensagens</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" data-target="#edit" data-toggle="tab" class="nav-link">Editar </a>
-                </li>
-            </ul>    
-            <div class="tab-content py-4" >
-                <div class="tab-pane active" id="profile">
-                    <div class="row">
-                       <div class="tab-pane" >
-                    <form role="form">
-                    <input type="hidden" name="cod_usuario" value="<?php echo $cod_usuario ?>">
-
-                        <h5 class="mb-4 ml-2">Sobre:</h5>
-                        <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Login</label>
-
-                                <input class="form-control" type="text" value="<?php echo $nomeUsuario ?>" disabled>
-
-                            </div>
-                        </div>
-                        <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Email</label>
-                            <div class="col-lg-9">
-
-                                <input class="form-control" type="email" value="<?php echo $email ?>" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Endereço</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text"  value="Rua Geronimo" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Cidade/UF</label>
-                            <div class="col-lg-6">
-                                <input class="form-control" type="text" value="Barretos" disabled>
-                            </div>
-                            <div class="col-lg-3">
-                                <input class="form-control" type="text"  value="SãoPaulo" disabled>
-
-                            </div>
-                        </div>
-
-                        <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Usuário</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="text" value="<?php echo $login; ?>" disabled>
-                            </div>
-                        </div>
-                        <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Senha</label>
-                            <div class="col-lg-9">
-                                <input class="form-control" type="password" value="<?php echo $senha; ?>" disabled>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                        
-                            
-                    </div>
-                    <!--/row-->
-                </div>
-                <div class="tab-pane" id="messages">
-                    <div class="alert alert-info alert-dismissable">
-                        <a class="panel-close close" data-dismiss="alert">×</a>Voce possiu mensagens novas !
-                    </div>
-                    <table class="table table-hover table-striped">
-                        <tbody>                                    
-                            <tr>
-                                <td>
-                                   <span class="float-right font-weight-bold">Evandro</span>Adorei essa casa!
-                                </td>
-                            </tr>
-                        </tbody> 
-                    </table>
-                </div>
-
+    <div class="my-2">
+        <div class=" order-lg-2 mt-5">  
+            <div class="col" >
                 <!-- FORM PARA INSERIR -->
-                <div class="tab-pane" id="edit">
+                <div class="" id="edit">
                     <form role="form" onsubmit="return false;" method="POST">
+                        <input type="hidden" name="cod_usuario" value="<?php echo $cod_usuario ?>">
+                        <input type="hidden" name="cod_usuarioEnd" value="<?php echo $cod_usuarioEnd ?>">
+                        <input type="hidden" name="cod_usuarioTel" value="<?php echo $cod_usuarioTel ?>">
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Login</label>
                             <div class="col-lg-9">
@@ -203,7 +159,7 @@ session_start();
 
 
                         <div class="form-group row ml-5">
-                            <label class="col-lg-3 col-form-label form-control-label">Usuário</label>
+                            <label class="col-lg-3 col-form-label form-control-label">Nome</label>
                             <div class="col-lg-9">
                                 <input class="form-control" type="text" name="nome" value="<?php echo $nomeUsuario; ?>">
                             </div>
@@ -211,7 +167,19 @@ session_start();
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Senha</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" name="senha" value="<?php echo $senha; ?>" >
+                                <input class="form-control" type="password" name="senha" value="<?php echo $senha; ?>" >
+                            </div>
+                        </div>
+                        <div class="form-group row ml-5">
+                            <label class="col-lg-3 col-form-label form-control-label">Celular</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" name="tel_celular" value="<?php echo $tel_celular; ?>" >
+                            </div>
+                        </div>
+                        <div class="form-group row ml-5">
+                            <label class="col-lg-3 col-form-label form-control-label">Telefone</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" name="tel_celular" value="<?php echo $tel_fixo; ?>" >
                             </div>
                         </div>
 
@@ -219,7 +187,7 @@ session_start();
                             <div class="form-group row">
                             <label class="col-lg-3 col-form-label form-control-label"></label>
                             <div class="col-lg-9" style="padding-left: 5%">
-                                <input type="reset" class="btn btn-secondary" value="Cancel">
+                                <input type="reset" class="btn btn-secondary" value="Cancelar">
                                 <input type="submit" id="btnEnviar" class="btn btn-primary" value="Enviar">
                             </div>
                         </div>
@@ -257,14 +225,14 @@ session_start();
             </div>
         </div>
 
-        <div class="col-lg-4 order-lg-1 text-center mt-5 ">
+        <!-- <div class="col-lg-4 order-lg-1 text-center mt-5 ">
             <img src="assets/upload/iconEvan.png" class="border border-5 border-light rounded-lg mx-auto img-fluid img-circle d-block" alt="avatar">
             <h6 class="mt-2">Upload a different photo</h6>
             <label class="custom-file">
                 <input type="file" id="file" class="custom-file-input">
                 <span class="custom-file-control">Alterar Imagem</span>
             </label>
-        </div>
+        </div> -->
     </div>
 </div>  
                 
