@@ -2,7 +2,10 @@
     function casasValorAsc() {
         include("./controller/conexao.php");
         // Buscando imoveis do usuario
-        $buscaCasa = "SELECT * FROM tab_casa ORDER BY aluguel ASC";
+        $buscaCasa = "SELECT * FROM tab_casa AS tc
+        INNER JOIN tab_imagem_casa AS tic
+            ON tc.cod_casa = tic.cod_casa
+        ORDER BY aluguel ASC";
         // cod_casa,qtd_quarto, qtd_banheiro, qtd_suite, area, aluguel, tipo, garagem, cod_usuario
         try{
             $res = $conn->prepare($buscaCasa);
@@ -36,7 +39,7 @@
                     <div class="col-lg-4">
                         <div class="single-property">
                             <div class="images">
-                                <img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
+                                <img class="img-fluid mx-auto d-block" src="<?php echo "./".$listar["caminho_imagem"]."/".$listar["nome_imagem"]; ?>" alt="">
                                 <a href="./imovel.php?&cod_imovel=<?php echo $listar['cod_casa'];?>"><span>Ver imóvel</span></a>
                             </div>
                             

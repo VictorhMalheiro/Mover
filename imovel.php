@@ -6,10 +6,10 @@ session_start();
         $cod_imovelURL = $_GET['cod_imovel'];
     }
 
-    if(!isset($_SESSION['login']) && (!isset($_SESSION['senha']))){
-        header("Location: login.php");exit;
-        $name =  $_SESSION['login'];
-    }
+    // if(!isset($_SESSION['login']) && (!isset($_SESSION['senha']))){
+    //     header("Location: login.php");exit;
+    //     $name =  $_SESSION['login'];
+    // }
 
     // INCLUDES PHP
     include_once("./theme/header.php");
@@ -52,7 +52,9 @@ session_start();
                 $buscaCasa = "SELECT * 
                 FROM tab_casa AS tc
                     INNER JOIN tab_endereco_casa AS tec
-                    ON tc.cod_casa = tec.cod_casa
+                        ON tc.cod_casa = tec.cod_casa
+                    INNER JOIN tab_imagem_casa AS tic
+                        ON tc.cod_casa = tic.cod_casa
                 WHERE tc.cod_casa = $cod_imovelURL";
             ?>
             <?php
@@ -109,7 +111,7 @@ session_start();
                                     <div class="">
                                         <div class="single-property">
                                             <div class="images">
-                                                <img class="img-fluid mx-auto d-block" src="assets/img/s1.jpg" alt="">
+                                                <img class="img-fluid mx-auto d-block" src="<?php echo "./".$listar["caminho_imagem"]."/".$listar["nome_imagem"]; ?>" alt="">
                                                 <span>Para alugar</span>
                                             </div>
                                             

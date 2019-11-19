@@ -3,13 +3,16 @@
     ?>
     
         <div class="search-field ">
+            <div class="text-center" style="">
+                <h1 style="color: #333 !important" class="text-uppercase">Encontre seu imóvel</h1>
+            </div>
+            <div class="text-center" style="">
+                <h4 style="font-weight: 100" class="search-title">Aqui você negocia direto com o proprietário</h4>
+            </div>
             <form class="search-form"  method="POST" action="../residencias.php">
                 <div class="row">
                 <div class="col-lg-12  d-flex align-items-center justify-content-center toggle-wrap">
                     <div class="row">
-                        <div class="col- text-justify " style="margin-left: 20%;">
-                            <h4 class="search-title">Pesquise sua Residencia</h4>
-                        </div>
                         <div class="col">
                             <div class="onoffswitch3 d-block mx-auto">
                                 <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked="">

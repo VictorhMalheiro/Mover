@@ -34,35 +34,23 @@ session_start();
 	}
 
 
-    // $nome_imagem = $_FILES['formData']['name'];
-
-    // $nome_img64 = base64_encode($nome_imagem);
-
-    // $tipo_imagem = $_FILES['formData']['type'];
-
-    // $tamanho_imagem = $_FILES['formData']['size'];
-
-    // //condição para o tamanho da imagem...
-
-    // if($tamanho_imagem <= 1000000){
-    //     $des = $_SERVER['DOCUMENT_ROOT'].'/assets/upload/';
-
-    //     move_uploaded_file($_FILES['imagem']['tmp_name'],$des.$nome_img64);
-    // } else {
-    //     echo "<div class='alert alert-danger'>Tamanho da imagem não permitido</div>";
-    // }
-
     $sql = "INSERT INTO tab_casa(cod_casa, qtd_quarto, qtd_banheiro, qtd_suite, area, aluguel, tipo, garagem, cod_usuario) 
 	VALUES (NULL, :qtd_quarto, :qtd_banheiro, :qtd_suite, :area, :aluguel, :tipo, :garagem, :cod_usuario)";
 	
 	$sql2 = "INSERT INTO tab_endereco_casa
 		(cod_endereco, logradouro, numero, bairro, cidade, uf, cep, cod_casa)
 	VALUES
-		(NULL, :logradouro, :numero, :bairro, :cidade, :uf, :cep, :cod_casa)";
+        (NULL, :logradouro, :numero, :bairro, :cidade, :uf, :cep, :cod_casa)";
+        
+    $sql_img = "INSERT INTO tab_imagem_casa 
+        (cod_imagem, nome_imagem, caminho_imagem, cod_casa)
+    VALUES 
+        (NULL, :nome_imagem, :caminho_imagem, :cod_casa)";
 	
 	try{
         $stmt = $conn->prepare($sql);
 		$stmt2 = $conn->prepare($sql2);
+        $stmt3 = $conn->prepare($sql_img);
 
         $stmt->bindParam(':qtd_quarto', $_POST['qtd_quarto'], PDO::PARAM_INT);
         $stmt->bindParam(':qtd_banheiro', $_POST['qtd_banheiro'], PDO::PARAM_INT);
@@ -73,7 +61,8 @@ session_start();
         $stmt->bindParam(':garagem', $_POST['garagem'], PDO::PARAM_STR);
         $stmt->bindParam(':cod_usuario', $cod_usuario, PDO::PARAM_INT);
 		
-		$stmt->execute();
+        $stmt->execute();
+        
 		$last_id = $conn->lastInsertId($sql);
 		
         $stmt2->bindParam(':logradouro', $_POST['logradouro'], PDO::PARAM_STR);
@@ -91,48 +80,30 @@ session_start();
         $contar2 = $stmt2->rowCount();
 
         // REGISTRO DE IMAGENS NO BANCO E EM PASTA
-        $SendCadImg = filter_input(INPUT_POST, 'SendCadImg', FILTER_SANITIZE_STRING);
-        if ($SendCadImg) {
-            //Receber os dados do formulário
-            $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-            $nome_imagem = $_FILES['imagem']['name'];
-            //var_dump($_FILES['imagem']);
-            //Inserir no BD
-            $sql_img = "INSERT INTO tab_imagem_casa (cod_imagem, nome, imagem, cod_casa) VALUES (NULL, :nome, :imagem, :cod_casa)";
-            $stmt_msg = $conn->prepare($sql_img);
-            $stmt_msg->bindParam(':nome', $nome);
-            $stmt_msg->bindParam(':imagem', $nome_imagem);
-            $stmt_msg->bindParam(':imagem', $nome_imagem);
-            $stmt_msg->bindParam(':cod_casa', $last_id);
-            $stmt_msg->execute();
-            $contar_img = $stmt_msg->rowCount();
-            //Verificar se os dados foram inseridos com sucesso
-            if ($contar_img == 1) {
-                //Recuperar último ID inserido no banco de dados
-                $ultimo_id = $conn->lastInsertId($sql_img);
-
-                //Diretório onde o arquivo vai ser salvo
-                $diretorio = 'upload/' . $ultimo_id.'/';
-
-                //Criar a pasta de foto 
-                mkdir($diretorio, 0755);
-                
-                if(move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$nome_imagem)){
-                    echo "<p style='color:green;'>Dados salvo com sucesso e upload da imagem realizado com sucesso</p>";
-                    // header("Location: index.php");
-                }else{
-                    echo "<p><span style='color:green;'>Imagem salva com sucesso. </span><span style='color:red;'>Erro ao realizar o upload da imagem</span></p>";
-                    // header("Location: index.php");
-                }        
-            } else {
-                echo "<p style='color:red;'>Erro ao salvar a imagem</p>";
-                // header("Location: index.php");
+        // if(isset($_POST['cadastrar'])){
+            $formatosPermitidos = array("png", "jpeg", "jpg");
+            $extensao = pathinfo($_FILES['imagem']['name'], PATHINFO_EXTENSION);
+            
+            if(in_array($extensao, $formatosPermitidos)){
+                $pasta = "../assets/upload/";
+                $temporario = $_FILES['imagem']['tmp_name'];
+                $novoNome = uniqid().".$extensao";
+                $caminho = "/assets/upload/";
+                //Inserir no BD                
+                $stmt3->bindParam(':nome_imagem', $novoNome, PDO::PARAM_STR);
+                $stmt3->bindParam(':caminho_imagem', $caminho, PDO::PARAM_STR);
+                $stmt3->bindParam(':cod_casa', $last_id, PDO::PARAM_INT);
+                $stmt3->execute();
+                if(move_uploaded_file($temporario, $pasta.$novoNome)){
+                    $mensagem = "Upload feito com sucesso";
+                }else {
+                    $mensagem = "Erro, não foi possivel fazer o upload";
+                }
+            }else{
+                $mensagem = "Formato inválido";
             }
-        } else {
-            echo "<p style='color:red;'>Erro ao salvar a imagem</p>";
-            // header("Location: index.php");
-        }
-
+        // }
+        echo $mensagem;
 
         if($contar > 0 && $contar2 > 0){
             echo "<div class='alert alert-info'>Que legal ".$nomeUsuario."

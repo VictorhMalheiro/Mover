@@ -46,9 +46,6 @@
 				<div class="container">
 					<div class="row fullscreen align-items-center justify-content-center" style="height: 915px;">
 						<div class="banner-content col-lg-12 col-md-12">
-							<h1 class="text-uppercase">
-								Ache seu imóvel
-							</h1>
 							<?php
 								include_once("./theme/buscaPropriedades.php");
 								buscaPropriedades();
