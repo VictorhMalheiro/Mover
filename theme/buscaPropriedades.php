@@ -8,7 +8,7 @@
                 <div class="col-lg-12  d-flex align-items-center justify-content-center toggle-wrap">
                     <div class="row">
                         <div class="col- text-justify " style="margin-left: 20%;">
-                            <h4 class="search-title">Pesquise sua Residencia</h4>
+                            <h4 class="search-title">Pesquise seu Imóvel</h4>
                         </div>
                         <div class="col">
                             <div class="onoffswitch3 d-block mx-auto">
@@ -65,7 +65,7 @@
                 </div>
                 									    
                 <div class="mx-auto d-flex justify-content-end">
-                    <button class="primary-btn mt-50" style="height: 45px;" onclick="ajaxPesquisaResidencia();">Pesquisar propriedades
+                    <button class="primary-btn mt-50" style="height: 45px;" onclick="ajaxPesquisaResidencia();">Pesquisar 
                     <span class="lnr lnr-arrow-right"></span></button>
                 </div>						  
                 </div>
