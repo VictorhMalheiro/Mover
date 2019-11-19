@@ -378,14 +378,14 @@
 						</div>
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h6>Volte ao Topo</h6>
+								<h6>Volte a Home</h6>
 								<p></p>
 								<div class="" id="mc_embed_signup">
 
 										
 
 										<div class="flex-row">
-				                            	<a href="index.php"><button class="primary-btn" href="index.php" >Inicio<span class="lnr lnr-arrow-right"></span><div></div></button></a>
+				                            	<a href="index.php"><button class="primary-btn" href="index.php" >Home<span class="lnr lnr-arrow-right"></span><div></div></button></a>
 				                            	<div style="position: absolute; left: -5000px;">
 													
 												</div>
