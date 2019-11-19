@@ -137,7 +137,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <h1><?php echo $tipo." para alugar com ".$listar['qtd_quarto']." quartos, ".$listar['area']."m²"?></h1>
+                                    <h1 class="mt-40"><?php echo $tipo." para alugar com ".$listar['qtd_quarto']." quartos, ".$listar['area']."m²"?></h1>
                                     <div class="col">
                                         <h4 class="mt-20">Endereço</h4>
                                         <span>

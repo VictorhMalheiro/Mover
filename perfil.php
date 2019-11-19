@@ -2,15 +2,24 @@
 ob_start();
 session_start();
 
-    if(!isset($_SESSION['login']) && (!isset($_SESSION['senha']))){
+    $login = null;
+    $senha = null;
+
+    if(!isset($_SESSION['login']) && (!isset($_SESSION['senha'])) && $_SESSION['w_id_y']){
         header("Location: login.php");exit;
         $name =  $_SESSION['login'];
+        
+    } else {
+        $logged = true;
+        $login = $_SESSION['login'];
+        $senha = $_SESSION['senha'];
+        $cod_usuario = $_SESSION['w_id_y'];
     }
 
     // INCLUDES PHP
     include_once("./theme/header.php");
     include_once("./theme/footer.php");
-    include_once("controller/conexao.php");
+    include_once("./controller/conexao.php");
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -52,39 +61,37 @@ session_start();
             <!--  -->
             <div class="col mb-30">
             <?php
-                include("controller/conexao.php");
-                $logged = false;
-                $login = null;
-                $senha = null;
-                if(isset($_SESSION['login']) && (isset($_SESSION['senha']))){
-                    $logged = true;
-                    $login = $_SESSION['login'];
-                    $senha = $_SESSION['senha'];
-                }
                 //SELECIONAR OS DADOS DO USUARIO
+                // $buscaUsuario = "SELECT * 
+                // FROM tab_usuario AS tu
+                //     INNER JOIN tab_endereco_usuario AS teu
+                //         ON tu.cod_usuario = teu.cod_usuario
+                // WHERE tu.login=:$login AND tu.senha = $senha
+                // ";
                 $buscaUsuario = "SELECT * FROM tab_usuario WHERE login=:login AND senha=:senha";
-                try{
+                
+                try {
                     $res = $conn->prepare($buscaUsuario);
                     $res->bindParam('login',$login, PDO::PARAM_STR);
                     $res->bindParam('senha',$senha, PDO::PARAM_STR);
                     $res-> execute();
                     $contar = $res->rowCount();
 
-                    
                     if($contar == 1){
                         $linha = $res->fetchAll();
                         
                         foreach($linha as $listar){
                             $nomeUsuario = $listar['nome'];
+                            $email = $listar['email_usuario'];
                             $cod_usuario = $listar['cod_usuario'];
                         }
                     }
-                }catch(PDOException $erro){
-                    echo $erro;
+
+                } catch (PDOException $e) {
+                    echo $e;
                 }
-
-
-            ?>  
+                
+                ?>
  <div class="container-fluid">
     <div class="row my-2">
         <div class="col-lg-8 order-lg-2 mt-5">
@@ -104,17 +111,19 @@ session_start();
                     <div class="row">
                        <div class="tab-pane" >
                     <form role="form">
+                    <input type="hidden" name="cod_usuario" value="<?php echo $cod_usuario ?>">
+
                         <h5 class="mb-4 ml-2">Sobre:</h5>
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Nome</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="Jane" disabled>
+                                <input class="form-control" type="text" value="<?php echo $nomeUsuario ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Email</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="email" value="email@gmail.com" disabled>
+                                <input class="form-control" type="email" value="<?php echo $email ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group row ml-5">
@@ -136,7 +145,7 @@ session_start();
                         <div class="form-group row ml-5">
                             <label class="col-lg-3 col-form-label form-control-label">Usuário</label>
                             <div class="col-lg-9">
-                                <input class="form-control" type="text" value="<?php echo $nomeUsuario; ?>" disabled>
+                                <input class="form-control" type="text" value="<?php echo $login; ?>" disabled>
                             </div>
                         </div>
                         <div class="form-group row ml-5">
